@@ -1,0 +1,63 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+:root {
+    --main-color: #111111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    width: 3%;
+    height: 1.7%;
+    margin: 30px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+header nav a#logo {
+    margin-left: 230px;
+}
+
+header nav a#about {
+    margin-left: 124px;
+}
+
+header nav a#recipes {
+    margin-left: 30px;
+}
+
+header nav a:hover {
+    font-weight: bold;
+    transition: 900ms;
+}
+
+footer {
+    background-color: #eeeeee;
+    height: 52px;
+    width: 100%;
+    margin-top: 4.5%;
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #999999;
+    flex: 1;
+    text-align: center;
+}

@@ -1,0 +1,40 @@
+:root {
+    --main-color: #111111;
+}
+
+header nav a#recipes {
+    font-weight: bold;
+}
+
+.content2 .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 36px;
+    width: 300px;
+    margin-left: 16.4%;
+}
+
+.content2 .card:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.content2 .cards .card img {
+    width: 278px;
+    height: 120px;
+    border-radius: 15px;
+}
+
+.content2 .cards .card h3 {
+    font-size: 18px;
+    color: var(--main-color);
+    margin-top: 1.8%;
+}
+
+.content2 .cards .card h4 {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #777777;
+    margin-top: 0.5%;
+    margin-bottom: 2.7%;
+}
