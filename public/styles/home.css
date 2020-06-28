@@ -49,6 +49,11 @@
     margin-left: 16.4%;
 }
 
+.content2 .cards .card:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
 .content2 .cards .card img {
     width: 278px;
     height: 120px;
