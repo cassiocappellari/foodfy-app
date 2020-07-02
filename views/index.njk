@@ -1,0 +1,65 @@
+{%extends 'layout.njk'%}
+
+{%block head%}
+<title>Foodfy</title>
+{%endblock%}
+
+{%block content%}
+<section class="content1">
+    <div class="content">
+        <h1>The Best Recipes</h1>
+        <p>Learn how to build the best dishes with recipes created by professionals from all over the world.</p>
+    </div>
+    <div class="img-background">
+        <img src="/chef.png" alt="Chef Foodfy">
+    </div>
+</section>
+<section class="content2">
+    <h2>Most accessed</h2>
+    <div class="cards">
+        <div class="card" id="burger">
+            <img src="/burger.png" alt="Burger">
+            <h3>Triple Bacon Burger</h3>
+            <h4>by Jorge Relato</h4>
+        </div>
+        <div class="card" id="pizza">
+            <img src="/pizza.png" alt="Pizza">
+            <h3>Pizza 4 Seasons</h3>
+            <h4>by Fabiana Melo</h4>
+        </div>
+        <div class="card" id="espaguete">
+            <img src="/espaguete.png" alt="Espaguete">
+            <h3>Spaghetti with Garlic</h3>
+            <h4>by Júlia Kinoto</h4>
+        </div>
+        <div class="card" id="lasanha">
+            <img src="/lasanha.png" alt="Lasanha">
+            <h3>Mac n' Cheese Lasagna</h3>
+            <h4>by Juliano Vieira</h4>
+        </div>
+        <div class="card" id="doce">
+            <img src="/doce.png" alt="Pão-do-Céu">
+            <h3>Pão-do-Céu Sweets</h3>
+            <h4>by Ricardo Golvea</h4>
+        </div>
+        <div class="card" id="asinhas">
+            <img src="/asinhas.png" alt="Asinhas de Frango">
+            <h3>Barbecue Chicken Wings</h3>
+            <h4>by Vania Steroski</h4>
+        </div>
+    </div>
+    <div class="modal-overlay">
+        <div class="modal">
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+            <div class="modal-content">
+                <img src="" alt="">
+                <h3></h3>
+                <h4></h4>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/scripts.js"></script>
+{%endblock%}

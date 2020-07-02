@@ -7,7 +7,7 @@ server.use(express.static('public/styles'))
 server.use(express.static('public/assets'))
 server.use(express.static('public/scripts'))
 
-server.set('view engine', 'html')
+server.set('view engine', 'njk')
 
 nunjucks.configure('views', {
     express: server
