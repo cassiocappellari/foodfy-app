@@ -8,7 +8,7 @@ for (let card of cards) {
         const imageId = card.getAttribute("id")
         const dishName = card.getElementsByTagName("h3")[0].textContent
         const dishAuthor = card.getElementsByTagName("h4")[0].textContent
-        modalOverlay.querySelector('img').src=`../public/assets/${imageId}.png`
+        modalOverlay.querySelector('img').src=`/${imageId}.png`
         modalOverlay.querySelector('h3').innerHTML = `${dishName}`
         modalOverlay.querySelector('h4').innerHTML = `${dishAuthor}`
     })
