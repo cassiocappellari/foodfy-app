@@ -6,6 +6,10 @@ header nav a#recipes {
     font-weight: bold;
 }
 
+.content2 {
+    margin-top: 28px;
+}
+
 .content2 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
