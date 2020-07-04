@@ -4,21 +4,29 @@
 <title>Foodfy</title>
 {%endblock%}
 
+{%block styles%}
+<link rel="stylesheet" href="/details.css">
+{%endblock%}
+
 {%block content%}
-<section class="content2">
-    <div class="cards">
-            <div class="card" id="{{item.id}}">
+<section class="content">
+    <div class="recipes">
+            <div class="recipe-card" id="{{item.id}}">
                 <img src="/{{item.id}}.png" alt="{{item.id}}">
-                <h3>{{item.title}}</h3>
-                <h4>{{item.author}}</h4>
+                <h2>{{item.title}}</h2>
+                <h4>by {{item.author}}</h4>
             </div>
             <div>
+                <h3>Ingredientes</h3>
+                <p>Esconder</p>
                 <p>{{item.ingredients}}</p>
             </div>
             <div>
+                <h3>Modo de Preparo</h3>
                 <p>{{item.preparation}}</p>
             </div>
             <div>
+                <h3>Informações Adicionais</h3>
                 <p>{{item.information}}</p>
             </div>
     </div>
