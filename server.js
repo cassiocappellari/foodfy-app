@@ -27,15 +27,18 @@ server.get('/about', function(req, res){
     return res.render('about')
 })
 
-server.get('/details/:index', function(req, res) {
-    const recipeIndex = req.params.index
+server.get('/details/:id', function(req, res) {
+    const recipeId = req.params.id
 
-    const recipeData = recipes.find(function(recipe) {
-        
+    const recipe = recipes.find(function(recipe){
+        return recipe.id == recipeId
     })
 
+    if(!recipe) {
+        res.send('Recipe not found!')
+    }
 
-    return res.render('details')
+    return res.render('details', {item: recipe})
 })
 
 server.listen(5000, function(){

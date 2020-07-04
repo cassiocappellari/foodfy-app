@@ -1,2 +1,27 @@
 {%extends 'layout.njk'%}
 
+{%block head%}
+<title>Foodfy</title>
+{%endblock%}
+
+{%block content%}
+<section class="content2">
+    <div class="cards">
+            <div class="card" id="{{item.id}}">
+                <img src="/{{item.id}}.png" alt="{{item.id}}">
+                <h3>{{item.title}}</h3>
+                <h4>{{item.author}}</h4>
+            </div>
+            <div>
+                <p>{{item.ingredients}}</p>
+            </div>
+            <div>
+                <p>{{item.preparation}}</p>
+            </div>
+            <div>
+                <p>{{item.information}}</p>
+            </div>
+    </div>
+</section>
+<script src="/scripts.js"></script>
+{%endblock%}
