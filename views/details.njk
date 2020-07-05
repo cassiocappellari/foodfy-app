@@ -12,21 +12,29 @@
 <section class="content">
     <div class="recipes">
             <div class="recipe-card" id="{{item.id}}">
-                <img src="/{{item.id}}.png" alt="{{item.id}}">
+                <img src="{{item.image}}" alt="{{item.id}}">
                 <h2>{{item.title}}</h2>
                 <h4>by {{item.author}}</h4>
             </div>
             <div class="recipe-content">
                 <div>
-                    <h3>Ingredientes <a>Mostrar</a></h3>
-                    <p>{{item.ingredients}}</p>
+                    <h3>Ingredientes <a>ESCONDER</a></h3>
+                    <ul>
+                    {%for ingredient in item.ingredients%}
+                        <li>{{ingredient}}</li>
+                    {%endfor%}
+                    </ul>
                 </div>
                 <div>
-                    <h3>Modo de Preparo <a>Mostrar</a></h3>
-                    <p>{{item.preparation}}</p>
+                    <h3>Modo de Preparo <a>ESCONDER</a></h3>
+                    <ul>
+                    {%for prep in item.preparation%}
+                        <li>{{prep}}</li>
+                    {%endfor%}
+                    </ul>
                 </div>
                 <div>
-                    <h3>Informações Adicionais <a>Mostrar</a></h3>
+                    <h3>Informações Adicionais <a>ESCONDER</a></h3>
                     <p>{{item.information}}</p>
                 </div>
             </div>
