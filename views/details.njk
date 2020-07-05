@@ -16,25 +16,25 @@
                 <h2>{{item.title}}</h2>
                 <h4>by {{item.author}}</h4>
             </div>
-            <div class="recipe-content">
-                <div>
-                    <h3>Ingredientes <a>ESCONDER</a></h3>
+            <div class="recipes-content">
+                <div class="recipe-ingredients">
+                    <h3>Ingredientes <a id="button1">ESCONDER</a></h3>
                     <ul>
                     {%for ingredient in item.ingredients%}
                         <li>{{ingredient}}</li>
                     {%endfor%}
                     </ul>
                 </div>
-                <div>
-                    <h3>Modo de Preparo <a>ESCONDER</a></h3>
+                <div class="recipe-preparation">
+                    <h3>Modo de Preparo <a id="button2">ESCONDER</a></h3>
                     <ul>
                     {%for prep in item.preparation%}
                         <li>{{prep}}</li>
                     {%endfor%}
                     </ul>
                 </div>
-                <div>
-                    <h3>Informações Adicionais <a>ESCONDER</a></h3>
+                <div class="recipe-information">
+                    <h3>Informações Adicionais <a id="button3">ESCONDER</a></h3>
                     <p>{{item.information}}</p>
                 </div>
             </div>
