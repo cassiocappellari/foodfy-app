@@ -16,18 +16,19 @@
                 <h2>{{item.title}}</h2>
                 <h4>by {{item.author}}</h4>
             </div>
-            <div>
-                <h3>Ingredientes</h3>
-                <p>Esconder</p>
-                <p>{{item.ingredients}}</p>
-            </div>
-            <div>
-                <h3>Modo de Preparo</h3>
-                <p>{{item.preparation}}</p>
-            </div>
-            <div>
-                <h3>Informações Adicionais</h3>
-                <p>{{item.information}}</p>
+            <div class="recipe-content">
+                <div>
+                    <h3>Ingredientes <a>Mostrar</a></h3>
+                    <p>{{item.ingredients}}</p>
+                </div>
+                <div>
+                    <h3>Modo de Preparo <a>Mostrar</a></h3>
+                    <p>{{item.preparation}}</p>
+                </div>
+                <div>
+                    <h3>Informações Adicionais <a>Mostrar</a></h3>
+                    <p>{{item.information}}</p>
+                </div>
             </div>
     </div>
 </section>

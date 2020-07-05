@@ -6,6 +6,12 @@
     margin: 0 230px;
 }
 
+.recipe-content a {
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: lighter;
+}
+
 .content .recipes .recipe-card img {
     width: 940px;
     height: 320px;
