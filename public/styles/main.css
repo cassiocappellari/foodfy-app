@@ -2,6 +2,7 @@
 
 :root {
     --main-color: #111111;
+    --green-color: #2EA652;
 }
 
 * {
@@ -16,16 +17,22 @@ body {
 
 header nav {
     display: flex;
+    background-color: var(--main-color);
 }
 
 header nav a {
     width: 3%;
     height: 1.7%;
-    margin: 30px;
+    margin: 15px 30px 0px 30px;
     font-size: 16px;
     line-height: 26px;
-    color: var(--main-color);
+    color: var(--green-color);
     text-decoration: none;
+}
+
+header nav a img {
+    width: 120px;
+    height: 50px;
 }
 
 header nav a#logo {
@@ -34,10 +41,12 @@ header nav a#logo {
 
 header nav a#about {
     margin-left: 124px;
+    margin-top: 30px;
 }
 
 header nav a#recipes {
     margin-left: 30px;
+    margin-top: 30px;
 }
 
 header nav a:hover {
@@ -46,7 +55,7 @@ header nav a:hover {
 }
 
 footer {
-    background-color: #eeeeee;
+    background-color: var(--main-color);
     height: 52px;
     width: 100%;
     margin-top: 4.5%;
@@ -57,7 +66,7 @@ footer {
 footer p {
     font-size: 14px;
     line-height: 24px;
-    color: #999999;
+    color: var(--green-color);
     flex: 1;
     text-align: center;
 }

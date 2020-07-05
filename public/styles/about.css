@@ -1,5 +1,6 @@
 :root {
     --main-color: #111111;
+    --green-color: #2EA652;
 }
 
 header nav a#about {
@@ -7,7 +8,7 @@ header nav a#about {
 }
 
 .content {
-    margin: 0 230px;
+    margin: 32px 230px;
 }
 
 .content h2 {

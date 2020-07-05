@@ -1,9 +1,10 @@
 :root {
     --main-color: #111111;
+    --green-color: #2EA652;
 }
 
 .content {
-    margin: 0 230px;
+    margin: 32px 230px;
 }
 
 .recipes-content a#button1,

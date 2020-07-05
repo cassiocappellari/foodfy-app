@@ -1,11 +1,17 @@
+:root {
+    --main-color: #111111;
+    --green-color: #2EA652;
+}
+
 .content1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: #fbdfdb;
+    background: var(--main-color);
     width: 67.1%;
     height: 33.2%;
     border-radius: 30px;
-    margin: 0 16.4% 3.5% 16.4%;
+    margin: 32px 16.4% 3.5% 16.4%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
 }
 
 .content1 .content {
@@ -15,23 +21,23 @@
 .content1 .content h1 {
     font-size: 32px;
     font-weight: bold;
-    color: var(--main-color);
+    color: var(--green-color);
     margin-bottom: 0px;
 }
 
 .content1 .content p {
     font-size: 18px;
     line-height: 28px;
-    color: #000000;
+    color: var(--green-color);
     opacity: 0.7;
     margin-top: 8px;
     max-width: 300px;
 }
 
 .content1 .img-background img {
-    width: 216px;
+    width: 432px;
     height: 300px;
-    margin: 14.4% 23.6% 0 17.7%;
+    margin: 14.4% 0 0 0;
 }
 
 .content2 h2 {
@@ -46,7 +52,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 36px;
     width: 300px;
-    margin-left: 16.4%;
+    margin-left: 13%;
+}
+
+.cards .card {
+    border: 1px solid var(--main-color);
+    padding: 16px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
 }
 
 .content2 .cards .card:hover {
@@ -62,7 +75,7 @@
 
 .content2 .cards .card h3 {
     font-size: 18px;
-    color: var(--main-color);
+    color: var(--green-color);
     margin-top: 1.8%;
 }
 
@@ -70,6 +83,6 @@
     font-size: 14px;
     font-weight: lighter;
     color: #777777;
-    margin-top: 0.5%;
-    margin-bottom: 2.7%;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
 }
