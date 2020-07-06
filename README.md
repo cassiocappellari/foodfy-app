@@ -1,9 +1,9 @@
 <h1 align="center">
-    <img src="./public/assets/logo.svg">
+    <img src="./public/assets/logo.png">
 </h1>
 
 <h2 align="center">
-    <img src="./public/assets/gif-apt.gif">
+    <img src="./public/assets/preview-foodfy.gif">
 </h2>
 
 ---
@@ -15,9 +15,9 @@
 
 ---
 
-## ♻ About
+## 🍕 About
 
-**Ecoleta** is a marketplace that helps people to find and register recycling points efficiently. The project is a **Full Stack application** (back-end and front-end) developed during the Next Level Week by RocketSeat.
+**Foodfy** is a web platform that helps people to build great dishes with recipes created by professionals from all over the world. The project is a **fullstack application** (backend and frontend) developed during the coding bootcamp named LaunchBase, by Rocketseat.
 
 ---
 
@@ -28,7 +28,6 @@ The project was developed using this technologies:
 **Back-end:**
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
-- [SQLite3](https://www.sqlite.org/version3.html)
 
 **Front-end:**
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
