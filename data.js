@@ -2,139 +2,144 @@ module.exports = [
     {
       id: 'burger',
       image: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png',
-      title: 'Triplo bacon burger',
+      title: 'Triplo Bacon Burger',
       author: 'Jorge Relato',
       ingredients: [
-        '3 kg de carne moída (escolha uma carne magra e macia)',
-        '300 g de bacon moído',
-        '1 ovo',
-        '3 colheres (sopa) de farinha de trigo',
-        '3 colheres (sopa) de tempero caseiro: feito com alho, sal, cebola, pimenta e cheiro verde processados no liquidificador',
-        '30 ml de água gelada'
+        '3 kg of ground meat (choose lean and tender meat);',
+        '300 g of ground bacon;',
+        '1 egg;',
+        '3 tablespoons of wheat flour;',
+        '3 tablespoons of homemade seasoning: made with garlic, salt, onion, pepper and green smell processed in a blender;',
+        '30 ml of cold water.'
       ],
+      time: '30 min',
       preparation: [
-        'Misture todos os ingredientes muito bem e amasse para que fique tudo muito bem misturado',
-        'Faça porções de 90 g a 100 g',
-        'Forre um plástico molhado em uma bancada e modele os hambúrgueres utilizando um aro como base',
-        'Faça um de cada vez e retire o aro logo em seguida',
-        'Forre uma assadeira de metal com plástico, coloque os hambúrgueres e intercale camadas de carne e plásticos (sem apertar).',
-        'Faça no máximo 4 camadas por forma e leve para congelar',
-        'Retire do congelador, frite ou asse e está pronto'
+        'Mix all ingredients very well and knead so that everything is well mixed;',
+        'Make portions of 90 g to 100 g;',
+        'Line a wet plastic on a countertop and shape the hamburgers using a hoop as a base;',
+        'Do one at a time and remove the ring immediately afterwards;',
+        'Line a metal baking sheet with plastic, place the hamburgers and interleave layers of meat and plastics (without squeezing);',
+        'Make a maximum of 4 layers per shape and freeze;',
+        'Remove from the freezer, fry or bake and you are done.'
       ],
-      information: "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \n\nVocê sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface."
+      information: "Preheat the plate, frying pan or grill for 10 minutes before taking the hamburgers. Add a little oil or butter and don't mash the burgers! Did you know that the recipe that precedes the hamburger appeared in the 13th century, in Europe? The idea of ​​grinding the meat arrived in Hamburg in the 17th century, where a butcher also decided to season it. Thus, the recipe was disseminated in the United States by Germans in the region. There the idea arose to place the hamburger in the middle of the bread and add other ingredients, such as cheese, tomatoes and lettuce."
     },
     {
       id: 'pizza',
       image: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/pizza.png',
-      title: 'Pizza 4 estações',
+      title: '4 Seasons Pizza',
       author: 'Fabiana Melo',
       ingredients: [
-        '1 xícara (chá) de leite',
-        '1 ovo',
-        '1 colher (chá) de sal',
-        '1 colher (chá) de açúcar',
-        '1 colher (sopa) de margarina',
-        '1 e 1/2 xícara (chá) de farinha de trigo',
-        '1 colher (sobremesa) de fermento em pó',
-        '1/2 lata de molho de tomate',
-        '250 g de mussarela ralada grossa',
-        '2 tomates fatiados',
-        'azeitona picada',
-        'orégano a gosto'
+        '1 cup (tea) of milk;',
+        '1 egg;',
+        '1 teaspoon of salt;',
+        '1 teaspoon of sugar;',
+        '1 tablespoon of margarine;',
+        '1 and 1/2 cup (tea) of wheat flour;', 
+        '1 spoon (dessert) of baking powder;',
+        '1/2 can of tomato sauce;',
+        '250 g of coarsely grated mozzarella;',
+        '2 sliced ​​tomatoes;',
+        'chopped olives;',
+        'oregano to taste.'
       ],
+      time: '45 min',
       preparation: [
-        'No liquidificador bata o leite, o ovo, o sal, o açúcar, a margarina, a farinha de trigo e o fermento em pó até que tudo esteja encorporado.',
-        'Despeje a massa em uma assadeira para pizza untada com margarina e leve ao forno preaquecido por 20 minutos.',
-        'Retire do forno e despeje o molho de tomate.',
-        'Cubra a massa com mussarela ralada, tomate e orégano a gosto.',
-        'Leve novamente ao forno até derreter a mussarela.'
+        'In a blender, beat together milk, egg, salt, sugar, margarine, wheat flour and baking powder until everything is incorporated;',
+        'Pour the dough into a pizza pan greased with margarine and bake in the preheated oven for 20 minutes;',
+        'Remove from the oven and pour the tomato sauce;',
+        'Cover the pasta with grated mozzarella, tomato and oregano to taste;',
+        'Take it back to the oven until the mozzarella melts.'
       ],
-      information: 'Pizza de liquidificador é uma receita deliciosa e supersimples de preparar. Feita toda no liquidificador, ela é bem prática para o dia a dia. Aqui no TudoGostoso você também encontra diversas delícias práticas feitas no liquidificador: massa de panqueca, torta de frango de liquidificador, pão de queijo de liquidificador, bolo de banana, bolo de chocolate e muito mais!'
+      information: 'Blender pizza is a delicious and super simple recipe to prepare. Made entirely in a blender, it is very practical for everyday use. Here at TudoGostoso you can also find several practical delicacies made in a blender: pancake batter, blender chicken pie, blender cheese bread, banana cake, chocolate cake and much more!'
     },
     {
       id: 'asinhas',
       image: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png',
-      title: 'Asinhas de frango ao barbecue',
+      title: 'BBQ Chicken Wings',
       author: 'Vania Steroski',
       ingredients: [
-        '12 encontros de asinha de galinha, temperados a gosto',
-        '2 colheres de sopa de farinha de trigo',
-        '1/2 xícara (chá) de óleo',
-        '1 xícara de molho barbecue'
+        '12 chicken wings, seasoned to taste;',
+        '2 tablespoons of wheat flour;',
+        '1/2 cup (tea) of oil;',
+        '1 cup of barbecue sauce.'
       ],
+      time: '45 min',
       preparation: [
-        'Em uma tigela coloque o encontro de asinha de galinha e polvilhe a farinha de trigo e misture com as mãos.',
-        'Em uma frigideira ou assador coloque o óleo quando estiver quente frite até ficarem douradas.',
-        'Para servir fica bonito com salada, ou abuse da criatividade.'
+        'In a bowl place the chicken wings and sprinkle the flour and mix with your hands;',
+        'In a frying pan or roaster place the oil when it is hot fry until golden brown;',
+        'To serve it looks nice with salad, or abuse your creativity.'
       ],
       information: ''
     },
     {
       id: 'lasanha',
       image: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/lasanha.png',
-      title: "Lasanha mac n' cheese",
+      title: "Mac n 'cheese Lasagna",
       author: 'Juliano Vieira',
       ingredients: [
-        'massa pronta de lasanha',
-        '400 g de presunto',
-        '400 g de mussarela ralada',
-        '2 copos de requeijão',
-        '150 g de mussarela para gratinar'
+        'Ready lasagna dough;',
+        '400 g of ham;',
+        '400 g of grated mozzarella;',
+        '2 glasses of curd;',
+        '150 g of mozzarella for gratin.'
       ],
+      time: '50 min',
       preparation: [
-        'Em uma panela, coloque a manteiga para derreter.',
-        'Acrescente a farinha de trigo e misture bem com auxílio de um fouet.',
-        'Adicione o leite e misture até formar um creme homogêneo.',
-        'Tempere com sal, pimenta e noz-moscada a gosto.',
-        'Desligue o fogo e acrescente o creme de leite; misture bem e reserve.'
+        'In a pan, put the butter to melt.',
+        'Add the wheat flour and mix well with the help of a fouet.',
+        'Add the milk and mix until it forms a homogeneous cream.',
+        'Season with salt, pepper and nutmeg to taste.',
+        'Turn off the heat and add the cream; mix well and set aside. '
       ],
-      information: 'Recheie a lasanha com o que preferir.'
+      information: 'Fill the lasagna with whatever you prefer.'
     },
     {
       id: 'espaguete',
       image: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/macarrao.png',
-      title: 'Espaguete ao alho',
+      title: 'Garlic Spaghetti',
       author: 'Júlia Kinoto',
       ingredients: [
-        '1 pacote de macarrão 500 g (tipo do macarrão a gosto)',
-        '1 saquinho de alho granulado',
-        '1/2 tablete de manteiga (não use margarina)',
-        '1 colher (sopa) de azeite extra virgem',
-        'ervas (manjericão, orégano, salsa, cebolinha, tomilho, a gosto)',
-        'sal',
-        '1 dente de alho',
-        'gengibre em pó a gosto',
-        '1 folha de louro'
+        '1 packet of pasta 500 g (type of pasta to taste);',
+        '1 bag of granulated garlic;',
+        '1/2 butter tablet (do not use margarine);',
+        '1 tablespoon of extra virgin olive oil;',
+        'herbs (basil, oregano, parsley, chives, thyme, to taste);',
+        'salt;',
+        '1 clove of garlic;',
+        'powdered ginger to taste;',
+        '1 bay leaf.'
       ],
+      time: '20 min',
       preparation: [
-        'Quando faltar mais ou menos 5 minutos para ficar no ponto de escorrer o macarrão, comece o preparo da receita.',
-        'Na frigideira quente coloque a manteiga, o azeite, a folha de louro, e o alho granulado.',
-        'Nesta hora um pouco de agilidade, pois o macarrão escorrido vai para a frigideira, sendo mexido e dosado com sal a gosto, as ervas, o gengibre em pó a gosto também.',
-        'O dente de alho, serve para você untar os pratos onde serão servidos o macarrão.',
-        'Coloque as porções nos pratos já com o cheiro do alho, e enfeite com algumas ervas.'
+        'When there is about 5 minutes left before you are ready to drain the pasta, start preparing the recipe;',
+        'Put the butter, oil, bay leaf, and granulated garlic in the hot skillet;',
+        'At this time a little agility, because the drained pasta goes to the frying pan, being stirred and dosed with salt to taste, the herbs, the powdered ginger to taste as well;',
+        'The garlic clove is used to grease the dishes where the pasta will be served;',
+        'Put the portions on the dishes already smelling of garlic, and garnish with some herbs.'
       ],
-      information: 'Não lave o macarrão nem passe óleo ou gordura nele depois de escorrê-lo. Coloque direto na frigideira.'
+      information: 'Do not wash the pasta or oil or grease it after draining it. Place directly in the frying pan.'
     },
     {
       id: 'doce',
       image: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/doce.png',
-      title: 'Docinhos pão-do-céu',
+      title: 'Pão-do-céu Sweets',
       author: 'Ricardo Golvea',
       ingredients: [
-        '1 kg de batata - doce',
-        '100 g de manteiga',
-        '3 ovos',
-        '1 pacote de coco seco ralado (100 g)',
-        '3 colheres (sopa) de açúcar 1 lata de Leite Moça',
-        '1 colher (sopa) de fermento em pó',
-        'manteiga para untar',
-        'açúcar de confeiteiro'
+        '1 kg sweet-potato;',
+        '100 g butter;',
+        '3 eggs;',
+        '1 packet of grated dry coconut (100 g);',
+        '3 tablespoons of sugar 1 can of Leite Moça;',
+        '1 tablespoon of baking powder;',
+        'butter to grease;',
+        'icing sugar;'
       ],
+      time: '50 min',
       preparation: [
-        'Cozinhe a batata-doce numa panela de pressão, com meio litro de água, por cerca de 20 minutos. Descasque e passe pelo espremedor, ainda quente.',
-        'Junte a manteiga,os ovos, o coco ralado,o açúcar, o Leite Moça e o fermento em pó, mexendo bem após cada adição.',
-        'Despeje em assadeira retangular média, untada e leve ao forno médio (180°C), por aproximadamente 45 minutos. Depois de frio, polvilhe, com o',
-        'açúcar de confeiteiro e corte em quadrados.'
+        'Cook the sweet potato in a pressure cooker, with half a liter of water, for about 20 minutes. Peel and pass through the juicer, still hot;',
+        'Add the butter, eggs, desiccated coconut, sugar, Leite Moça and baking powder, stirring well after each addition;',
+        'Pour into a greased, medium rectangular baking dish and place in a medium oven (180 ° C) for approximately 45 minutes. After cold, sprinkle with icing sugar and cut into squares.'
       ],
       information: ''
     }

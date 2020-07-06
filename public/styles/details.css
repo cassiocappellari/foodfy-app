@@ -24,20 +24,20 @@
 
 .content .recipes .recipe-card h2 {
     font-size: 36px;
-    color: var(--main-color);
+    color: var(--green-color);
     margin: 50px 0 4px 0;
     font-weight: bold;
 }
 
 .content .recipes .recipes-content h3 {
     font-size: 24px;
-    color: var(--main-color);
+    color: var(--green-color);
     margin-bottom: 20px;
 }
 
 .content .recipes .recipes-content p {
     font-size: 18px;
-    color: #444444;
+    color: var(--main-color);
     line-height: 28px;
     margin-bottom: 40px;
 }
@@ -49,21 +49,21 @@
 
 }
 
-.content .recipes-content .recipe-ingredients.hidde ul {
+.content .recipes-content .recipe-ingredients.hide ul {
     display: none;
 }
 
-.content .recipes-content .recipe-preparation.hidde ul {
+.content .recipes-content .recipe-preparation.hide ul {
     display: none;
 }
 
-.content .recipes-content .recipe-information.hidde p {
+.content .recipes-content .recipe-information.hide p {
     display: none;
 }
 
 .content .recipes .recipes-content li {
     font-size: 18px;
-    color: #444444;
+    color: var(--main-color);
     line-height: 28px;
 }
 

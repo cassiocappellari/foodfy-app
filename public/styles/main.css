@@ -17,7 +17,6 @@ body {
 
 header nav {
     display: flex;
-    background-color: var(--main-color);
 }
 
 header nav a {
@@ -31,8 +30,9 @@ header nav a {
 }
 
 header nav a img {
-    width: 120px;
-    height: 50px;
+    width: 90px;
+    height: 27px;
+    margin-top: 16px;
 }
 
 header nav a#logo {

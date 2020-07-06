@@ -8,7 +8,7 @@ header nav a#recipes {
 }
 
 .content2 {
-    margin-top: 28px;
+    margin-top: 58px;
 }
 
 .content2 .cards {
@@ -24,6 +24,21 @@ header nav a#recipes {
     cursor: pointer;
 }
 
+.cards .card {
+    position: relative;
+}
+
+.card .preparation-time {
+    font-size: 12px;
+    position: absolute;
+    top: 108px;
+    right: 30px;
+    background-color: var(--main-color);
+    color: var(--green-color);
+    border-radius: 30px;
+    padding: 4px 8px;
+}
+
 .content2 .cards .card img {
     width: 278px;
     height: 120px;
@@ -32,7 +47,7 @@ header nav a#recipes {
 
 .content2 .cards .card h3 {
     font-size: 18px;
-    color: var(--main-color);
+    color: var(--green-color);
     margin-top: 1.8%;
 }
 

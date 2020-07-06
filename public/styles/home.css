@@ -44,7 +44,7 @@
     margin: 0 0 1.8% 16.4%;
     font-size: 24px;
     line-height: 34px;
-    color: var(--main-color);
+    color: var(--green-color);
 }
 
 .content2 .cards {
@@ -56,10 +56,20 @@
 }
 
 .cards .card {
-    border: 1px solid var(--main-color);
     padding: 16px;
     border-radius: 30px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.card .preparation-time {
+    font-size: 12px;
+    position: absolute;
+    top: 125px;
+    right: 36px;
+    background-color: var(--main-color);
+    color: var(--green-color);
+    border-radius: 30px;
+    padding: 4px 8px;
 }
 
 .content2 .cards .card:hover {
