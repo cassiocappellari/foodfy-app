@@ -12,6 +12,8 @@
 
 - [About](#-about)
 - [Technologies](#-technologies)
+- [How To Use](#-howtouse)
+- [Author](#-author)
 
 ---
 
@@ -34,6 +36,34 @@ The project was developed using this technologies:
 - [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
 - [JavaScript](https://js.org/)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
+
+---
+
+## ⚙ How to Use
+
+```bash
+# Clone this repository
+
+$ git https://github.com/cassiocappellari/foodfy-app
+
+# Install the dependencies
+
+$ npm install
+
+# Start the project
+
+$ npm start
+
+```
+
+---
+
+## 👨‍🚀 Author
+
+**Cássio Cappellari**
+
+- GitHub: [@cassiocappellari](https://github.com/cassiocappellari)
+- LinkedIn: [@cassiocappellari](https://www.linkedin.com/in/cassiocappellari/)
 
 ---
 
