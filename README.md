@@ -19,7 +19,7 @@
 
 ## 🍕 About
 
-**Foodfy** is a web platform that helps people to build great dishes with recipes created by professionals from all over the world. The project is a **fullstack application** (backend and frontend) developed during the coding bootcamp named LaunchBase, by Rocketseat.
+**Foodfy** is a web platform that helps people to build great dishes with recipes created by professionals from all over the world. The project is a **fullstack application** (backend and frontend) developed during the coding bootcamp named LaunchBase, by [Rocketseat](https://rocketseat.com.br/).
 
 ---
 
