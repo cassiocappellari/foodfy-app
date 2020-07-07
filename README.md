@@ -12,7 +12,7 @@
 
 - [About](#-about)
 - [Technologies](#-technologies)
-- [How To Use](#-howtouse)
+- [How To Use](#-how-to-use)
 - [Author](#-author)
 
 ---
