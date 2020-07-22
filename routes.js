@@ -1,31 +1,15 @@
 const express = require('express')
 const routes = express.Router()
-const recipes = require('./data')
+const recipeRoutes = require('./controllers/recipes')
 
-routes.get('/', function(req, res){
-    return res.render('index', {items: recipes})
-})
+routes.get('/', recipeRoutes.index)
+routes.get('/recipes', recipeRoutes.recipes)
+routes.get('/about', recipeRoutes.about)
+routes.get('/details/:id', recipeRoutes.details)
 
-routes.get('/recipes', function(req, res){
-    return res.render('recipes', {items: recipes})
-})
-
-routes.get('/about', function(req, res){
-    return res.render('about')
-})
-
-routes.get('/details/:id', function(req, res) {
-    const recipeId = req.params.id
-
-    const recipe = recipes.find(function(recipe){
-        return recipe.id == recipeId
-    })
-
-    if(!recipe) {
-        res.send('Recipe not found!')
-    }
-
-    return res.render('details', {item: recipe})
-})
+routes.get('/admin/recipes', recipeRoutes.index)
+routes.get('/admin/recipes/create', recipeRoutes.create)
+routes.get('/admin/recipes/:id', recipeRoutes.show)
+routes.get('/admin/recipes/:id/edit', recipeRoutes.edit)
 
 module.exports = routes
