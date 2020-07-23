@@ -1,7 +1,7 @@
 const recipes = require('../data')
 
 exports.index = function(req, res){
-    return res.render('index', {items: recipes})
+    return res.render('recipes', {items: recipes})
 }
 
 exports.recipes = function(req, res){

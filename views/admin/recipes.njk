@@ -5,21 +5,11 @@
 {%endblock%}
 
 {%block styles%}
-<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" href="/admin.css">
 {%endblock%}
 
 {%block content%}
-<section class="content1">
-    <div class="content">
-        <h1>The Best Recipes</h1>
-        <p>Learn how to build the best dishes with recipes created by professionals from all over the world.</p>
-    </div>
-    <div class="img-background">
-        <img src="/main-logo.svg" alt="Chef Foodfy">
-    </div>
-</section>
 <section class="content2">
-    <h2>Our recipes</h2>
     <div class="cards">
         {%for item in items%}
         <div class="card" id="{{item.id}}">
@@ -29,6 +19,7 @@
             <h4>by {{item.author}}</h4>
         </div>
         {%endfor%}
+    </div>
 </section>
 <script src="/scripts.js"></script>
 {%endblock%}
