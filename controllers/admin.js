@@ -1,4 +1,5 @@
 const fs = require('fs')
+const recipes = require('../data')
 const data = require('../data.json')
 
 exports.index = function(req, res){
@@ -23,16 +24,16 @@ exports.post = function(req, res) {
         }
     }
 
-    let {recipeImg, ingredients, recipePrep, addInfo} = req.body
+    let id = 1
+    const lastMember = data.recipes[data.recipes.length - 1]
 
-    const id = Number(data.recipes.length + 1)
+    if (lastMember) {
+        id = lastMember.id + 1
+    }
 
     data.recipes.push({
         id,
-        recipeImg,
-        ingredients,
-        recipePrep,
-        addInfo
+        ...req.body
     })
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {

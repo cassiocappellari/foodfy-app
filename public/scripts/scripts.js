@@ -5,6 +5,9 @@ const displayInformation = document.querySelector(".recipe-information")
 const button1 = document.getElementById("button1")
 const button2 = document.getElementById("button2")
 const button3 = document.getElementById("button3")
+const ingredients = document.querySelector('#ingredients')
+const fieldContainer = document.querySelectorAll('.ingredient')
+const addIngredient = document.querySelector('.add-ingredient')
 
 for (let card of cards) {
     card.addEventListener("click", function() {
@@ -41,4 +44,13 @@ button3.addEventListener('click', function(){
         button3.innerHTML = 'HIDE'
         displayInformation.classList.remove("hide")
     }
+})
+
+addIngredient.addEventListener('click', function(){
+    const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true)
+
+    if (newField.lastChild == '') return false
+
+    newField.lastChild = ''
+    ingredients.appendChild(newField)
 })

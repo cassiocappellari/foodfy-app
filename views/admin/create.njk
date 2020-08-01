@@ -24,17 +24,17 @@
                 >
             </div>
         </div>
-        <div class="item">
+        <div class="item" id="ingredients">
             <div>Ingredients</div>
-            <div>
+            <div class="ingredient">
                 <input
                     type="text"
-                    name="ingredients"
+                    name="ingredients[]"
                     value="{{recipes.ingredients}}"
                 >
-                <a href="">
+                <button type="button" class="add-ingredient">
                     Add new ingredient
-                </a>
+                </button>
             </div>
         </div>
         <div class="item">

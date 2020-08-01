@@ -80,7 +80,8 @@ h2 {
     height: 260px;
 }
 
-.create-form .item a {
+button[type="button"].add-ingredient {
+    background: white;
     display: block;
     text-align: left;
     font-size: 16px;
