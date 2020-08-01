@@ -9,8 +9,9 @@ routes.get('/about', usersRoutes.about)
 routes.get('/details/:id', usersRoutes.details)
 
 routes.get('/admin/recipes', adminRoutes.index)
-/*routes.get('/admin/recipes/create', adminRoutes.create)
-routes.get('/admin/recipes/:id', adminRoutes.show)
+routes.post('/admin/recipes', adminRoutes.post)
+routes.get('/admin/recipes/create', adminRoutes.create)
+/*routes.get('/admin/recipes/:id', adminRoutes.show)
 routes.get('/admin/recipes/:id/edit', adminRoutes.edit)*/
 
 module.exports = routes

@@ -1,4 +1,4 @@
-{%extends 'layout.njk'%}
+{%extends 'admin/layout.njk'%}
 
 {%block head%}
 <title>Foodfy</title>
@@ -9,15 +9,19 @@
 {%endblock%}
 
 {%block content%}
+<h2>Recipe Management</h2>
 <section class="content2">
     <div class="cards">
         {%for item in items%}
-        <div class="card" id="{{item.id}}">
-            <img src="/{{item.id}}.png" alt="{{item.id}}">
-            <div class="preparation-time">{{item.time}}</div>
-            <h3>{{item.title}}</h3>
-            <h4>by {{item.author}}</h4>
-        </div>
+            <div class="card" id="{{item.id}}">
+                <div>
+                    <img src="/{{item.id}}.png" alt="{{item.id}}">
+                </div>
+                <div>
+                    <h3>{{item.title}}</h3>
+                    <h4>by {{item.author}}</h4>
+                </div>
+            </div>
         {%endfor%}
     </div>
 </section>

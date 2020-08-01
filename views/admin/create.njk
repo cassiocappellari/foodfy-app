@@ -1,0 +1,62 @@
+{%extends 'admin/layout.njk'%}
+
+{%block head%}
+<title>Foodfy</title>
+{%endblock%}
+
+{%block styles%}
+<link rel="stylesheet" href="/admin.css">
+{%endblock%}
+
+{%block content%}
+<h2>Create Recipe</h2>
+<section class="create-form">
+    <form action="/admin/recipes" method="post">
+        <button type="submit">Save Recipe</button>
+        <div class="item">
+            <div>Recipe Image</div>
+            <div>
+                <input
+                    type="text"
+                    name="recipeImg"
+                    placeholder="http://"
+                >
+            </div>
+        </div>
+        <div class="item">
+            <div>Ingredients</div>
+            <div>
+                <input
+                    type="text"
+                    name="ingredients"
+                >
+                <a href="">
+                    Add new ingredient
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <div>Recipe Prepare</div>
+            <div>
+                <input
+                    type="text"
+                    name="recipePrep"
+                >
+                <a href="">
+                    Add new step
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <div>Additional Information</div>
+            <div>
+                <input
+                    type="text"
+                    name="addInfo"
+                >
+            </div>
+        </div>
+    </form>
+</section>
+<script src="/scripts.js"></script>
+{%endblock%}
