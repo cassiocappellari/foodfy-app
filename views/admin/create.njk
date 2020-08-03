@@ -32,10 +32,10 @@
                     name="ingredients[]"
                     value="{{recipes.ingredients}}"
                 >
-                <button type="button" class="add-ingredient">
-                    Add new ingredient
-                </button>
             </div>
+            <button type="button" class="add-ingredient">
+                Add new ingredient
+            </button>
         </div>
         <div class="item">
             <div>Recipe Prepare</div>
@@ -53,11 +53,12 @@
         <div class="item">
             <div>Additional Information</div>
             <div>
-                <input
-                    type="text"
+                <textarea 
                     name="addInfo"
-                    value="{{recipes.addInfo}}"
+                    cols="30" 
+                    rows="5"
                 >
+                </textarea>
             </div>
         </div>
     </form>

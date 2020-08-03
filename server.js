@@ -16,7 +16,8 @@ server.use(routes)
 
 nunjucks.configure('views', {
     express: server,
-    autoescape: false
+    autoescape: false,
+    noCache: true
 })
 
 server.listen(5000, function(){

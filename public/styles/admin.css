@@ -64,20 +64,24 @@ h2 {
 .create-form .item {
     margin-left: 16.4%;
     margin-bottom: 4%;
-    position: relative;
 }
 
-.create-form .item input {
+.create-form .item input,
+textarea {
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     border-radius: 4px;
     width: 940px;
     height: 49px;
+    margin-bottom: 6px;
 }
 
-.create-form div:nth-child(5) input {
-    height: 260px;
+textarea {
+    resize: none;
+    font-size: 16px;
+    padding: 10px;
+    height: 250px;
 }
 
 button[type="button"].add-ingredient {
