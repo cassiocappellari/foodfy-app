@@ -9,10 +9,17 @@
 {%endblock%}
 
 {%block content%}
-<h2>Create Recipe</h2>
+
 <section class="create-form">
     <form action="/admin/recipes" method="POST">
-        <button type="submit">Save Recipe</button>
+        <div class="form-header">
+            <div>
+                <h2>Create Recipe</h2>
+            </div>
+            <div id="button">
+                <button type="submit">Save Recipe</button>
+            </div>
+        </div>
         <div class="item">
             <div>Recipe Image</div>
             <div>
@@ -24,14 +31,16 @@
                 >
             </div>
         </div>
-        <div class="item" id="ingredients">
+        <div class="item">
             <div>Ingredients</div>
-            <div class="ingredient">
-                <input
-                    type="text"
-                    name="ingredients[]"
-                    value="{{recipes.ingredients}}"
-                >
+            <div id="ingredients">
+                <div class="ingredient">
+                    <input
+                        type="text"
+                        name="ingredients[]"
+                        value="{{recipes.ingredients}}"
+                    >
+                </div>
             </div>
             <button type="button" class="add-ingredient">
                 Add new ingredient
@@ -39,16 +48,18 @@
         </div>
         <div class="item">
             <div>Recipe Prepare</div>
-            <div>
-                <input
-                    type="text"
-                    name="recipePrep"
-                    value="{{recipes.recipePrep}}"
-                >
-                <a href="">
-                    Add new step
-                </a>
+            <div id="preps">
+                <div class="prep">
+                    <input
+                        type="text"
+                        name="recipePrep[]"
+                        value="{{recipes.recipePrep}}"
+                    >
+                </div>
             </div>
+            <button type="button" class="add-prep">
+                Add new step
+            </button>
         </div>
         <div class="item">
             <div>Additional Information</div>

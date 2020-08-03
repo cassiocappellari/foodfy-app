@@ -13,3 +13,19 @@ function addIngredient() {
 document
     .querySelector(".add-ingredient")
     .addEventListener("click", addIngredient)
+
+function addPrep() {
+    const preps = document.querySelector("#preps")
+    const fieldContainer = document.querySelectorAll(".prep")
+    
+    const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true)
+    
+    if (newField.children[0].value == "") return false
+    
+    newField.children[0].value = ""
+    preps.appendChild(newField)
+}
+
+document
+    .querySelector(".add-prep")
+    .addEventListener("click", addPrep)
