@@ -1,3 +1,12 @@
+const cards = document.querySelectorAll(".card")
+
+for (let card of cards) {
+    card.addEventListener("click", function() {
+        const recipeId = card.getAttribute('id')
+        window.location.href = `/admin/recipes/${recipeId}`
+    })
+}
+
 function addIngredient() {
     const ingredients = document.querySelector("#ingredients")
     const fieldContainer = document.querySelectorAll(".ingredient")

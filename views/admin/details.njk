@@ -1,4 +1,4 @@
-{%extends 'layout.njk'%}
+{%extends 'admin/layout.njk'%}
 
 {%block head%}
 <title>Foodfy</title>
@@ -6,10 +6,19 @@
 
 {%block styles%}
 <link rel="stylesheet" href="/details.css">
+<link rel="stylesheet" href="/admin.css">
 {%endblock%}
 
 {%block content%}
 <section class="content">
+    <div class="details-header">
+        <div>
+            <h2>Recipe: {{item.title}}</h2>
+        </div>
+        <div id="button">
+            <button type="submit">Edit Recipe</button>
+        </div>
+    </div>
     <div class="recipes">
             <div class="recipe-card" id="{{item.id}}">
                 <img src="{{item.image}}" alt="{{item.id}}">
@@ -18,7 +27,7 @@
             </div>
             <div class="recipes-content">
                 <div class="recipe-ingredients">
-                    <h3>Ingredients <a id="button1">HIDE</a></h3>
+                    <h3>Ingredients</h3>
                     <ul>
                     {%for ingredient in item.ingredients%}
                         <li>{{ingredient}}</li>
@@ -26,7 +35,7 @@
                     </ul>
                 </div>
                 <div class="recipe-preparation">
-                    <h3>How To Prepare <a id="button2">HIDE</a></h3>
+                    <h3>How To Prepare</h3>
                     <ul>
                     {%for prep in item.preparation%}
                         <li>{{prep}}</li>
@@ -34,7 +43,7 @@
                     </ul>
                 </div>
                 <div class="recipe-information">
-                    <h3>Additional Information <a id="button3">HIDE</a></h3>
+                    <h3>Additional Information</h3>
                     <p>{{item.information}}</p>
                 </div>
             </div>

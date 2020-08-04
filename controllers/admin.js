@@ -6,6 +6,20 @@ exports.index = function(req, res){
     return res.render('admin/recipes', {items: recipes})
 }
 
+exports.show = function(req, res) {
+    const recipeId = req.params.id
+
+    const recipe = recipes.find(function(recipe){
+        return recipe.id == recipeId
+    })
+
+    if(!recipe) {
+        res.send('Recipe not found!')
+    }
+
+    return res.render('admin/details', {item: recipe})
+}
+
 /*exports.recipes = function(req, res){
     return res.render('recipes', {items: recipes})
 }*/

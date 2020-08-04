@@ -9,8 +9,8 @@
 {%endblock%}
 
 {%block content%}
-<h2>Recipe Management</h2>
 <section class="content2">
+<h2>Recipe Management</h2>
     <div class="cards">
         {%for item in items%}
             <div class="card" id="{{item.id}}">
@@ -25,5 +25,5 @@
         {%endfor%}
     </div>
 </section>
-<script src="/scripts.js"></script>
+<script src="/admin/scripts.js"></script>
 {%endblock%}
