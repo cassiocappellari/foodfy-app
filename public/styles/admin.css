@@ -31,7 +31,7 @@ h2 {
 }
 
 .details-header h2 {
-    margin: 55px  0 24px 0;
+    margin: 48px  0 24px 0;
 }
 
 .content2 .cards .card {
@@ -71,7 +71,8 @@ h2 {
 }
 
 .form-header,
-.details-header {
+.details-header,
+.recipe-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -128,7 +129,8 @@ button[type="button"].add-prep {
 }
 
 .create-form button,
-.details-header button {
+.details-header button,
+.recipe-header #button {
     background: var(--main-color);
     color: var(--green-color);
     font-weight: bold;
@@ -138,7 +140,17 @@ button[type="button"].add-prep {
     cursor: pointer;
 }
 
-.create-form button:hover{
+.recipe-header #button {
+    text-decoration: none;
+}
+
+.recipe-header #buttonType {
+    margin-top: 55px;
+    margin-left: 235px;
+}
+
+.create-form button:hover,
+.recipe-header #button:hover {
     opacity: 0.7;
 }
 

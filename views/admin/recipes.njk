@@ -10,7 +10,14 @@
 
 {%block content%}
 <section class="content2">
-<h2>Recipe Management</h2>
+    <div class="recipe-header">
+        <div>
+            <h2>Recipe Management</h2>
+        </div>
+        <div id="buttonType">
+            <a href="/admin/recipes/create" id="button">Create Recipe</a>
+        </div>
+    </div>
     <div class="cards">
         {%for item in items%}
             <div class="card" id="{{item.id}}">

@@ -27,24 +27,7 @@
                     type="text"
                     name="recipeImg"
                     placeholder="http://"
-                >
-            </div>
-        </div>
-        <div class="item">
-            <div>Recipe Name</div>
-            <div>
-                <input
-                    type="text"
-                    name="recipeName"
-                >
-            </div>
-        </div>
-        <div class="item">
-            <div>Recipe Author</div>
-            <div>
-                <input
-                    type="text"
-                    name="recipeAuthor"
+                    value="{{recipe.recipeImg}}"
                 >
             </div>
         </div>
@@ -52,10 +35,13 @@
             <div>Ingredients</div>
             <div id="ingredients">
                 <div class="ingredient">
-                    <input
-                        type="text"
-                        name="recipeIngredients[]"
-                    >
+                    {%for ingredient in ingredients%}
+                        <input
+                            type="text"
+                            name="ingredients[]"
+                            value="{{ingredient}}"
+                        >
+                    {%endfor%}
                 </div>
             </div>
             <button type="button" class="add-ingredient">
@@ -63,22 +49,16 @@
             </button>
         </div>
         <div class="item">
-            <div>Prepare Time (minutes)</div>
-            <div>
-                <input
-                    type="text"
-                    name="recipeTime"
-                >
-            </div>
-        </div>
-        <div class="item">
             <div>Recipe Prepare</div>
             <div id="preps">
                 <div class="prep">
-                    <input
-                        type="text"
-                        name="recipePrep[]"
-                    >
+                    {%for prep in recipePrep%}
+                        <input
+                            type="text"
+                            name="recipePrep[]"
+                            value="{{prep}}"
+                        >
+                    {%endfor%}
                 </div>
             </div>
             <button type="button" class="add-prep">
@@ -89,9 +69,10 @@
             <div>Additional Information</div>
             <div>
                 <textarea 
-                    name="recipeInfo"
+                    name="addInfo"
                     cols="30" 
                     rows="5"
+                    value="{{recipe.addInfo}}"
                 >
                 </textarea>
             </div>

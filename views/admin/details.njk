@@ -16,7 +16,8 @@
             <h2>Recipe: {{item.title}}</h2>
         </div>
         <div id="button">
-            <button type="submit">Edit Recipe</button>
+            <a type="button" href="/admin/recipes/{{item.id}}/edit">Edit Recipe</a>
+            <button></button>
         </div>
     </div>
     <div class="recipes">
@@ -49,5 +50,5 @@
             </div>
     </div>
 </section>
-<script src="/scripts.js"></script>
+<script src="/admin/scripts.js"></script>
 {%endblock%}

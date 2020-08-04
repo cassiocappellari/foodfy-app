@@ -20,6 +20,24 @@ exports.show = function(req, res) {
     return res.render('admin/details', {item: recipe})
 }
 
+exports.edit = function(req, res) {
+    const {id} = req.params
+
+    const foundRecipe = data.recipes.find(function(recipe){
+        return id == recipe.id
+    })
+
+    if(!foundRecipe) {
+        return res.send('Recipe not founded')
+    }
+
+    const recipe = {
+        ...foundRecipe
+    }
+
+    return res.render('admin/edit', {recipe})
+}
+
 /*exports.recipes = function(req, res){
     return res.render('recipes', {items: recipes})
 }*/
