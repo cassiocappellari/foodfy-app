@@ -1,11 +1,12 @@
 const recipes = require('../data')
+const data = require('../data.json')
 
 exports.index = function(req, res){
-    return res.render('users/index', {items: recipes})
+    return res.render('users/index', {items: data.recipes})
 }
 
 exports.recipes = function(req, res){
-    return res.render('users/recipes', {items: recipes})
+    return res.render('users/recipes', {items: data.recipes})
 }
 
 exports.about = function(req, res){
@@ -13,14 +14,18 @@ exports.about = function(req, res){
 }
 
 exports.details = function(req, res) {
-    const recipeId = req.params.id
+    const {id} = req.params
 
-    const recipe = recipes.find(function(recipe){
-        return recipe.id == recipeId
+    const foundRecipe = data.recipes.find(function(recipe){
+        return id == recipe.id
     })
 
-    if(!recipe) {
+    if(!foundRecipe) {
         res.send('Recipe not found!')
+    }
+
+    const recipe = {
+        ...foundRecipe
     }
 
     return res.render('users/details', {item: recipe})
