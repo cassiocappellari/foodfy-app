@@ -55,26 +55,29 @@
       "recipeInfo": "Blender pizza is a delicious and super simple recipe to prepare. Made entirely in a blender, it is very practical for everyday use. Here at TudoGostoso you can also find several practical delicacies made in a blender: pancake batter, blender chicken pie, blender cheese bread, banana cake, chocolate cake and much more!"
     },
     {
-      "id": 3,
-      "recipeImg": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png",
-      "recipeName": "BBQ Chicken Wings",
-      "recipeAuthor": "Vania Steroski",
+      "id": 5,
+      "recipeImg": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/lasanha.png",
+      "recipeName": "Mac n 'cheese Lasagna",
+      "recipeAuthor": "Juliano Vieira",
       "recipeIngredients": [
-        "12 chicken wings, seasoned to taste;",
-        "2 tablespoons of wheat flour;",
-        "1/2 cup (tea) of oil;",
-        "1 cup of barbecue sauce."
+        "Ready lasagna dough;",
+        "400 g of ham;",
+        "400 g of grated mozzarella;",
+        "2 glasses of curd;",
+        "150 g of mozzarella for gratin."
       ],
-      "recipeTime": "45 min",
+      "recipeTime": "50 min",
       "recipePrep": [
-        "In a bowl place the chicken wings and sprinkle the flour and mix with your hands;",
-        "In a frying pan or roaster place the oil when it is hot fry until golden brown;",
-        "To serve it looks nice with salad, or abuse your creativity."
+        "In a pan, put the butter to melt;",
+        "Add the wheat flour and mix well with the help of a fouet;",
+        "Add the milk and mix until it forms a homogeneous cream;",
+        "Season with salt, pepper and nutmeg to taste;",
+        "Turn off the heat and add the cream; mix well and set aside;"
       ],
-      "recipeInfo": "No extra info."
+      "recipeInfo": "Fill the lasagna with whatever you prefer."
     },
     {
-      "id": 4,
+      "id": 6,
       "recipeImg": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/macarrao.png",
       "recipeName": "Garlic Spaghetti",
       "recipeAuthor": "Júlia Kinoto",
@@ -100,29 +103,7 @@
       "recipeInfo": "Do not wash the pasta or oil or grease it after draining it. Place directly in the frying pan."
     },
     {
-      "id": 5,
-      "recipeImg": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/lasanha.png",
-      "recipeName": "Mac n 'cheese Lasagna",
-      "recipeAuthor": "Juliano Vieira",
-      "recipeIngredients": [
-        "Ready lasagna dough;",
-        "400 g of ham;",
-        "400 g of grated mozzarella;",
-        "2 glasses of curd;",
-        "150 g of mozzarella for gratin."
-      ],
-      "recipeTime": "50 min",
-      "recipePrep": [
-        "In a pan, put the butter to melt;",
-        "Add the wheat flour and mix well with the help of a fouet;",
-        "Add the milk and mix until it forms a homogeneous cream;",
-        "Season with salt, pepper and nutmeg to taste;",
-        "Turn off the heat and add the cream; mix well and set aside;"
-      ],
-      "recipeInfo": "Fill the lasagna with whatever you prefer."
-    },
-    {
-      "id": 6,
+      "id": 7,
       "recipeImg": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/doce.png",
       "recipeName": "Pão-do-céu Sweets",
       "recipeAuthor": "Ricardo Golvea",
@@ -141,6 +122,25 @@
         "Cook the sweet potato in a pressure cooker, with half a liter of water, for about 20 minutes. Peel and pass through the juicer, still hot;",
         "Add the butter, eggs, desiccated coconut, sugar, Leite Moça and baking powder, stirring well after each addition;",
         "Pour into a greased, medium rectangular baking dish and place in a medium oven (180 ° C) for approximately 45 minutes. After cold, sprinkle with icing sugar and cut into squares."
+      ],
+      "recipeInfo": "No extra info."
+    },
+    {
+      "id": 8,
+      "recipeImg": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png",
+      "recipeName": "BBQ Chicken Wings",
+      "recipeAuthor": "Vania Steroski",
+      "recipeIngredients": [
+        "12 chicken wings, seasoned to taste;",
+        "2 tablespoons of wheat flour;",
+        "1/2 cup (tea) of oil;",
+        "1 cup of barbecue sauce."
+      ],
+      "recipeTime": "45 min",
+      "recipePrep": [
+        "In a bowl place the chicken wings and sprinkle the flour and mix with your hands;",
+        "In a frying pan or roaster place the oil when it is hot fry until golden brown;",
+        "To serve it looks nice with salad, or abuse your creativity."
       ],
       "recipeInfo": "No extra info."
     }

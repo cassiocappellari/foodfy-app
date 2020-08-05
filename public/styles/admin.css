@@ -67,6 +67,18 @@ h2 {
     margin-bottom: 2.7%;
 }
 
+form #delete-form {
+    position: relative;
+}
+
+button[type="submit"]#delete-button {
+    position: absolute;
+    top: 133px;
+    left: 900px;
+    background-color: lightcoral;
+    color: var(--main-color);
+}
+
 .form-header,
 .details-header,
 .recipe-header {
