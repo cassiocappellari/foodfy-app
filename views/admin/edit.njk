@@ -11,7 +11,7 @@
 {%block content%}
 
 <section class="create-form">
-    <form action="/admin/recipes" method="POST">
+    <form action="/admin/recipes?_method=PUT" method="POST">
         <div class="form-header">
             <div>
                 <h2>Create Recipe</h2>
@@ -102,13 +102,16 @@
                 </div>
                 <textarea 
                     name="recipeInfo"
-                    cols="30" 
-                    rows="5"
                 >
                 {{recipe.recipeInfo}}
                 </textarea>
             </div>
         </div>
+        <input
+            type="hidden"
+            name="id"
+            value={{recipe.id}}
+        >
     </form>
 </section>
 <script src="/admin/scripts.js"></script>

@@ -14,5 +14,6 @@ routes.get('/admin/recipes/:id', adminRoutes.show)
 routes.get('/admin/recipes/:id/edit', adminRoutes.edit)
 
 routes.post('/admin/recipes', adminRoutes.post)
+routes.put('/admin/recipes', adminRoutes.put)
 
 module.exports = routes
