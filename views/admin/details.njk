@@ -10,14 +10,13 @@
 {%endblock%}
 
 {%block content%}
-<section class="content">
+<section class="content" id="content-details">
     <div class="details-header">
         <div>
             <h2>Recipe: {{recipe.recipeName}}</h2>
         </div>
         <div id="button">
             <a type="button" href="/admin/recipes/{{recipe.id}}/edit">Edit Recipe</a>
-            <button></button>
         </div>
     </div>
     <div class="recipes">

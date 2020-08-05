@@ -40,6 +40,7 @@ header nav a#recipes {
 }
 
 .content2 .cards .card img {
+    object-fit: cover;
     width: 278px;
     height: 120px;
     border-radius: 15px;
