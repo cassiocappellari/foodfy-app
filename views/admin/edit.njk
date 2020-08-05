@@ -32,13 +32,33 @@
             </div>
         </div>
         <div class="item">
+            <div>Recipe Name</div>
+            <div>
+                <input
+                    type="text"
+                    name="recipeName"
+                    value="{{recipe.recipeName}}"
+                >
+            </div>
+        </div>
+        <div class="item">
+            <div>Recipe Author</div>
+            <div>
+                <input
+                    type="text"
+                    name="recipeAuthor"
+                    value="{{recipe.recipeAuthor}}"
+                >
+            </div>
+        </div>
+        <div class="item">
             <div>Ingredients</div>
             <div id="ingredients">
                 <div class="ingredient">
-                    {%for ingredient in ingredients%}
+                    {%for ingredient in recipe.recipeIngredients%}
                         <input
                             type="text"
-                            name="ingredients[]"
+                            name="recipeIngredients[]"
                             value="{{ingredient}}"
                         >
                     {%endfor%}
@@ -49,10 +69,20 @@
             </button>
         </div>
         <div class="item">
+            <div>Prepare Time (minutes)</div>
+            <div>
+                <input
+                    type="text"
+                    name="recipeTime"
+                    value="{{recipe.recipeTime}}"
+                >
+            </div>
+        </div>
+        <div class="item">
             <div>Recipe Prepare</div>
             <div id="preps">
                 <div class="prep">
-                    {%for prep in recipePrep%}
+                    {%for prep in recipe.recipePrep%}
                         <input
                             type="text"
                             name="recipePrep[]"
@@ -66,14 +96,16 @@
             </button>
         </div>
         <div class="item">
-            <div>Additional Information</div>
             <div>
+                <div>
+                    <label for="recipeInfo">Additional Information</label>
+                </div>
                 <textarea 
-                    name="addInfo"
+                    name="recipeInfo"
                     cols="30" 
                     rows="5"
-                    value="{{recipe.addInfo}}"
                 >
+                {{recipe.recipeInfo}}
                 </textarea>
             </div>
         </div>
