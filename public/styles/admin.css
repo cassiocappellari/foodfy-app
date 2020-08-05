@@ -35,13 +35,18 @@ h2 {
     grid-template-columns: 1fr 1fr;
 }
 
-.content2 .card:hover {
-    opacity: 0.7;
-    cursor: pointer;
-}
-
 .cards .card {
     position: relative;
+}
+
+.cards .card a#visualize-recipe {
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 14px;
+}
+
+.cards .card a#visualize-recipe:hover {
+    font-weight: bold;
 }
 
 .content2 .cards .card img {
@@ -63,8 +68,7 @@ h2 {
     font-size: 14px;
     font-weight: lighter;
     color: #777777;
-    margin-top: 0.5%;
-    margin-bottom: 2.7%;
+    margin: 4px 0 8px 0;
 }
 
 form #delete-form {
