@@ -1,5 +1,6 @@
 const fs = require('fs')
-// const recipes = require('../data')
+const db = require('../../config/db')
+const {date} = require('../../lib/useful')
 const data = require('../../../data.json')
 
 module.exports = {
@@ -52,23 +53,34 @@ module.exports = {
             }
         }
 
-        let id = 1
-        const lastMember = data.recipes[data.recipes.length - 1]
+        const query = `
+            INSERT INTO recipes (
+                image,
+                title,
+                ingredients,
+                preparation,
+                information,
+                created_at
+            ) VALUES ($1, $2, $3, $4, $5, $6)
+            RETURNING id
+        `
 
-        if (lastMember) {
-            id = lastMember.id + 1
-        }
+        const values = [
+            req.body.image,
+            req.body.title,
+            req.body.ingredients,
+            req.body.preparation,
+            req.body.information,
+            date(Date.now()).iso
+        ]
 
-        data.recipes.push({
-            id,
-            ...req.body
+        db.query(query, values, function(err, results){
+            if(err) return res.send('Database error!')
+
+            return res.redirect(`/admin/details/${results.rows[0].id}`)
         })
 
-        fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
-            if(err) return res.send('Write file error!')
-
-            return res.redirect('/recipes')
-        })
+        
     },
     details(req, res){
         const {id} = req.params
