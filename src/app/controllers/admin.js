@@ -1,6 +1,6 @@
 const fs = require('fs')
-const recipes = require('../data')
-const data = require('../data.json')
+// const recipes = require('../data')
+const data = require('../../../data.json')
 
 exports.index = function(req, res){
     return res.render('admin/recipes', {items: data.recipes})

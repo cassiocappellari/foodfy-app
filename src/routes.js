@@ -1,7 +1,7 @@
 const express = require('express')
 const routes = express.Router()
-const usersRoutes = require('./controllers/users')
-const adminRoutes = require('./controllers/admin')
+const usersRoutes = require('./app/controllers/users')
+const adminRoutes = require('./app/controllers/admin')
 
 routes.get('/', usersRoutes.index)
 routes.get('/recipes', usersRoutes.recipes)
