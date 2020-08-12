@@ -2,33 +2,22 @@ const fs = require('fs')
 const db = require('../../../config/db')
 const {date} = require('../../../lib/useful')
 const data = require('../../../../data.json')
+const Chef = require('../../models/Admin/Chef')
 
 module.exports = {
-    index(req, res){
-        
-        db.query(`SELECT * FROM chefs`, function(err, results) {
-            if(err) throw `Database error! ${err}`
-
-            return res.render('admin/chefs/chefs', {chefs: results.rows})
+    index(req, res){ 
+        Chef.all(function(chefs) {
+            return res.render('admin/chefs/chefs', {chefs})
         })
-
     },
     show(req, res){
-        const {id} = req.params
+        Chef.find(req.params.id, function(chef) {
+            if(!chef) return res.send('Chef not found!')
 
-        const foundRecipe = data.recipes.find(function(recipe){
-            return recipe.id == id
+            chef.created_at = date(chef.created_at).format
+
+            return res.render('admin/chefs/details', {chef})
         })
-
-        if(!foundRecipe) {
-            res.send('Recipe not found!')
-        }
-
-        const recipe = {
-            ...foundRecipe
-        }
-
-        return res.render('admin/recipes/details', {recipe})
     },
     edit(req, res){
         const {id} = req.params
@@ -59,27 +48,9 @@ module.exports = {
             }
         }
 
-        const query = `
-            INSERT INTO chefs (
-                name,
-                avatar_url,
-                created_at
-            ) VALUES ($1, $2, $3)
-            RETURNING id
-        `
-
-        const values = [
-            req.body.name,
-            req.body.avatar_url,
-            date(Date.now()).iso
-        ]
-
-        db.query(query, values, function(err, results){
-            if(err) throw `Database error! ${err}`
-
-            return res.redirect(`/admin/chefs/details/${results.rows[0].id}`)
+        Chef.create(req.body, function(chefs) {
+            return res.redirect(`/admin/chefs/details/${chefs.id}`)
         })
-
         
     },
     details(req, res){
