@@ -1,12 +1,12 @@
 const express = require('express')
 const routes = express.Router()
-const usersRoutes = require('./app/controllers/users')
+const siteRoutes = require('./app/controllers/site')
 const adminRoutes = require('./app/controllers/admin')
 
-routes.get('/', usersRoutes.index)
-routes.get('/recipes', usersRoutes.recipes)
-routes.get('/about', usersRoutes.about)
-routes.get('/details/:id', usersRoutes.details)
+routes.get('/', siteRoutes.index)
+routes.get('/recipes', siteRoutes.recipes)
+routes.get('/about', siteRoutes.about)
+routes.get('/details/:id', siteRoutes.details)
 
 routes.get('/admin/recipes', adminRoutes.index)
 routes.get('/admin/recipes/create', adminRoutes.create)

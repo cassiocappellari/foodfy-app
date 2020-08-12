@@ -3,13 +3,13 @@ const data = require('../../../data.json')
 
 module.exports = {
     index(req, res){
-        return res.render('users/index', {items: data.recipes})
+        return res.render('site/recipes/index', {items: data.recipes})
     },
     recipes(req, res){
-        return res.render('users/recipes', {items: data.recipes})
+        return res.render('site/recipes/recipes', {items: data.recipes})
     },
     about(req, res){
-        return res.render('users/about')
+        return res.render('site/about/about')
     },
     details(req, res){
         const {id} = req.params
@@ -26,6 +26,6 @@ module.exports = {
             ...foundRecipe
         }
 
-        return res.render('users/details', {item: recipe})
+        return res.render('site/recipes/details', {item: recipe})
     }
 }

@@ -5,7 +5,7 @@ const data = require('../../../data.json')
 
 module.exports = {
     index(req, res){
-        return res.render('admin/recipes', {items: data.recipes})
+        return res.render('admin/recipes/recipes', {items: data.recipes})
     },
     show(req, res){
         const {id} = req.params
@@ -22,7 +22,7 @@ module.exports = {
             ...foundRecipe
         }
 
-        return res.render('admin/details', {recipe})
+        return res.render('admin/recipes/details', {recipe})
     },
     edit(req, res){
         const {id} = req.params
@@ -39,10 +39,10 @@ module.exports = {
             ...foundRecipe
         }
 
-        return res.render('admin/edit', {recipe})
+        return res.render('admin/recipes/edit', {recipe})
     },
     create(req, res){
-        return res.render('admin/create')
+        return res.render('admin/recipes/create')
     },
     post(req, res){
         const keys = Object.keys(req.body)
@@ -58,10 +58,11 @@ module.exports = {
                 image,
                 title,
                 ingredients,
+                time,
                 preparation,
                 information,
                 created_at
-            ) VALUES ($1, $2, $3, $4, $5, $6)
+            ) VALUES ($1, $2, $3, $4, $5, $6, $7)
             RETURNING id
         `
 
@@ -69,13 +70,14 @@ module.exports = {
             req.body.image,
             req.body.title,
             req.body.ingredients,
+            req.body.time,
             req.body.preparation,
             req.body.information,
             date(Date.now()).iso
         ]
 
         db.query(query, values, function(err, results){
-            if(err) return res.send('Database error!')
+            if(err) throw `Database error! ${err}`
 
             return res.redirect(`/admin/details/${results.rows[0].id}`)
         })
@@ -97,7 +99,7 @@ module.exports = {
             ...foundRecipe
         }
 
-        return res.render('details', {recipe})
+        return res.render('/recipes/details', {recipe})
     },
     put(req, res){
         const {id} = req.body
@@ -127,7 +129,7 @@ module.exports = {
                 return res.send('Error!')
             }
 
-            return res.redirect(`/admin/recipes/${id}`)
+            return res.redirect(`/admin/recipes/recipes/${id}`)
         })
     },
     delete(req, res){
@@ -145,6 +147,6 @@ module.exports = {
             }
         })
 
-        return res.redirect('/recipes')
+        return res.redirect('/recipes/recipes')
     }
 }
