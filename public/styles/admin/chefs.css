@@ -1,0 +1,190 @@
+.create-form {
+    position: relative;
+}
+
+/*footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}*/
+
+:root {
+    --main-color: #111111;
+    --green-color: #2EA652;
+}
+
+header nav a#recipes {
+    font-weight: bold;
+}
+
+.content2 .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 300px;
+    margin: 0 10%;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--green-color);
+    line-height: 34px;
+}
+
+.form-header h2,
+.content2 h2 {
+    margin: 50px 0 30px 140px;
+}
+
+.details-header h2 {
+    margin: 48px  0 24px 0;
+}
+
+.content2 .cards .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+}
+
+.cards .card {
+    position: relative;
+}
+
+.cards .card a#visualize-chef {
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 12px;
+}
+
+.cards .card a#visualize-chef:hover {
+    font-weight: bold;
+}
+
+.content2 .cards .card img {
+    object-fit: cover;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.content2 .cards .card h3 {
+    font-size: 14px;
+    color: var(--green-color);
+    margin-top: 1.8% 0 0.5% 0;
+    width: 200px;
+}
+
+.content2 .cards .card h4 {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #777777;
+    margin: 4px 0 8px 0;
+}
+
+form #delete-form {
+    position: relative;
+}
+
+button[type="submit"]#delete-button {
+    position: absolute;
+    top: 133px;
+    left: 900px;
+    background-color: lightcoral;
+    color: var(--main-color);
+}
+
+.form-header,
+.details-header,
+.chef-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-header #button,
+.details-header #button {
+    text-align: right;
+    margin: 50px 170px 0 0;
+}
+
+.details-header #button {
+    margin-right: 0;
+}
+
+.create-form .item {
+    margin-left: 16.4%;
+    margin-bottom: 4%;
+}
+
+.create-form .item input,
+textarea {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    border-radius: 4px;
+    width: 940px;
+    height: 24px;
+    margin-bottom: 6px;
+    padding: 10px;
+}
+
+textarea {
+    resize: none;
+    font-size: 16px;
+    height: 250px;
+}
+
+button[type="button"].add-ingredient,
+button[type="button"].add-prep {
+    background: white;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--green-color);
+    text-decoration: none;
+    margin-top: 1%;
+    outline: none;
+    padding: 0;
+}
+
+.create-form .item div:nth-child(1) {
+    margin-bottom: 0.7%;
+}
+
+.create-form button,
+.details-header a,
+.chef-header #button {
+    background: var(--main-color);
+    color: var(--green-color);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 8px 16px 8px 16px;
+    cursor: pointer;
+}
+
+.details-header a {
+    text-decoration: none;
+}
+
+.chef-header #button {
+    text-decoration: none;
+}
+
+.chef-header #buttonType {
+    margin: 55px 0 0 410px;
+}
+
+.create-form button:hover,
+.chef-header #button:hover,
+.details-header a:hover {
+    opacity: 0.7;
+}
+
+.details-header {
+    width: 940px;
+}
+
+.content#content-details {
+    margin: 0 230px 32px 230px;
+}

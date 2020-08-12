@@ -1,7 +1,7 @@
 const fs = require('fs')
-const db = require('../../config/db')
-const {date} = require('../../lib/useful')
-const data = require('../../../data.json')
+const db = require('../../../config/db')
+const {date} = require('../../../lib/useful')
+const data = require('../../../../data.json')
 
 module.exports = {
     index(req, res){
@@ -129,7 +129,7 @@ module.exports = {
                 return res.send('Error!')
             }
 
-            return res.redirect(`/admin/recipes/recipes/${id}`)
+            return res.redirect(`/admin/recipes/${id}`)
         })
     },
     delete(req, res){

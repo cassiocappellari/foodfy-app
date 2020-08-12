@@ -1,0 +1,40 @@
+{%extends 'admin/layout.njk'%}
+
+{%block head%}
+<title>Foodfy</title>
+{%endblock%}
+
+{%block styles%}
+<link rel="stylesheet" href="/details.css">
+<link rel="stylesheet" href="/admin.css">
+{%endblock%}
+
+{%block content%}
+<section class="content" id="content-details">
+    <div class="details-header">
+        <div>
+            <h2>Chef: {{chefs.name}}</h2>
+        </div>
+        <div id="button">
+            <a type="button" href="/admin/recipes/{{recipe.id}}/edit">Edit Chef</a>
+        </div>
+    </div>
+    <div class="recipes">
+            <div class="recipe-card" id="{{recipe.id}}">
+                <img src="{{chefs.avatar_url}}" alt="{{chefs.name}}">
+                <h2>{{chefs.name}}</h2>
+                <h4></h4>
+            </div>
+            <div class="recipes-content">
+                <div class="recipe-ingredients">
+                    <h3>Ingredients</h3>
+                    <ul>
+                    {%for ingredient in recipe.recipeIngredients%}
+                        <li>{{ingredient}}</li>
+                    {%endfor%}
+                    </ul>
+                </div>
+    </div>
+</section>
+<script src="/admin/scripts.js"></script>
+{%endblock%}
