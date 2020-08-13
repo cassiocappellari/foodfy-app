@@ -39,7 +39,7 @@ module.exports = {
         }
 
         Chef.create(req.body, function(chefs) {
-            return res.redirect(`/admin/chefs/details/${chefs.id}`)
+            return res.redirect(`/admin/chefs/${chefs.id}`)
         })
         
     },
@@ -74,20 +74,8 @@ module.exports = {
         })
     },
     delete(req, res){
-        const {id} = req.body
-
-        const filteredRecipes = data.recipes.filter(function(recipe){
-            return recipe.id != id
+        Chef.delete(req.body.id, function() {
+            return res.redirect(`/admin/chefs`)
         })
-
-        data.recipes = filteredRecipes
-
-        fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
-            if(err) {
-                return res.send('Error!')
-            }
-        })
-
-        return res.redirect('/recipes/recipes')
     }
 }
