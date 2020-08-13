@@ -13,7 +13,7 @@
 <section class="content" id="content-details">
     <div class="details-header">
         <div>
-            <h2>Recipe: {{recipe.recipeName}}</h2>
+            <h2>Recipe: {{recipe.title}}</h2>
         </div>
         <div id="button">
             <a type="button" href="/admin/recipes/{{recipe.id}}/edit">Edit Recipe</a>
@@ -21,15 +21,15 @@
     </div>
     <div class="recipes">
             <div class="recipe-card" id="{{recipe.id}}">
-                <img src="{{recipe.recipeImg}}" alt="{{recipe.recipeName}}">
-                <h2>{{recipe.recipeName}}</h2>
-                <h4>by {{recipe.recipeAuthor}}</h4>
+                <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                <h2>{{recipe.title}}</h2>
+                <h4>by {{recipe.chefs_name}}</h4>
             </div>
             <div class="recipes-content">
                 <div class="recipe-ingredients">
                     <h3>Ingredients</h3>
                     <ul>
-                    {%for ingredient in recipe.recipeIngredients%}
+                    {%for ingredient in recipe.ingredients%}
                         <li>{{ingredient}}</li>
                     {%endfor%}
                     </ul>
@@ -37,14 +37,14 @@
                 <div class="recipe-preparation">
                     <h3>How To Prepare</h3>
                     <ul>
-                    {%for prep in recipe.recipePrep%}
-                        <li>{{prep}}</li>
+                    {%for preparation in recipe.preparation%}
+                        <li>{{preparation}}</li>
                     {%endfor%}
                     </ul>
                 </div>
                 <div class="recipe-information">
                     <h3>Additional Information</h3>
-                    <p>{{recipe.recipeInfo}}</p>
+                    <p>{{recipe.information}}</p>
                 </div>
             </div>
     </div>

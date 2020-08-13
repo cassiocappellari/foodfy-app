@@ -31,20 +31,23 @@
             </div>
         </div>
         <div class="item">
+            <div>Chef</div>
+            <div>
+                <select name="chef">
+                    {%for chef in chefOptions%}
+                        <option value="{{chef.id}}" {%if recipes.chef_id == chef.id%}selected{%endif%}>
+                            {{chef.name}}
+                        </option>
+                    {%endfor%}
+                </select>
+            </div>
+        </div>
+        <div class="item">
             <div>Recipe Name</div>
             <div>
                 <input
                     type="text"
                     name="title"
-                >
-            </div>
-        </div>
-        <div class="item">
-            <div>Recipe Author</div>
-            <div>
-                <input
-                    type="text"
-                    name="author"
                 >
             </div>
         </div>
