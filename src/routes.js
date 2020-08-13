@@ -20,7 +20,9 @@ routes.delete('/admin/recipes', adminRecipesRoutes.delete)
 routes.get('/admin/chefs', adminChefsRoutes.index)
 routes.get('/admin/chefs/create', adminChefsRoutes.create)
 routes.get('/admin/chefs/:id', adminChefsRoutes.show)
+routes.get('/admin/chefs/:id/edit', adminChefsRoutes.edit)
 
-routes.post('/admin/chefs/chefs', adminChefsRoutes.post)
+routes.post('/admin/chefs', adminChefsRoutes.post)
+routes.put('/admin/chefs', adminChefsRoutes.put)
 
 module.exports = routes

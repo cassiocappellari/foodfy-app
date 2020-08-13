@@ -1,0 +1,51 @@
+{%extends 'admin/layout.njk'%}
+
+{%block head%}
+<title>Foodfy</title>
+{%endblock%}
+
+{%block styles%}
+<link rel="stylesheet" href="/admin.css">
+{%endblock%}
+
+{%block content%}
+
+<section class="create-form">
+    <form action="/admin/chefs?_method=PUT" method="POST">
+        <div class="form-header">
+            <div>
+                <h2>Create Chef</h2>
+            </div>
+            <div id="button">
+                <button type="submit">Save Chef</button>
+            </div>
+        </div>
+        <div class="item">
+            <div>Name</div>
+            <div>
+                <input
+                    type="text"
+                    name="name"
+                    value="{{chef.name}}"
+                >
+            </div>
+        </div>
+        <div class="item">
+            <div>Avatar</div>
+            <div>
+                <input
+                    type="text"
+                    name="avatar_url"
+                    value="{{chef.avatar_url}}"
+                >
+            </div>
+        </div>
+        <input
+            type="hidden"
+            name="id"
+            value={{chef.id}}
+        >
+    </form>
+</section>
+<script src="/admin/scripts.js"></script>
+{%endblock%}
