@@ -13,7 +13,7 @@
     --green-color: #2EA652;
 }
 
-header nav a#recipes {
+header nav a#chefs {
     font-weight: bold;
 }
 
@@ -187,4 +187,32 @@ button[type="button"].add-prep {
 
 .content#content-details {
     margin: 0 230px 32px 230px;
+}
+
+.content {
+    margin: 32px 230px;
+}
+
+.content .chefs .chef-card img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.chefs .chef-card {
+    text-align: center;
+}
+
+.content .chefs .chef-card h2 {
+    font-size: 36px;
+    color: var(--green-color);
+    margin: 30px 0 4px 0;
+    font-weight: bold;
+}
+
+.content .chefs .chefs-content h3 {
+    font-size: 24px;
+    color: var(--green-color);
+    margin-bottom: 20px;
 }

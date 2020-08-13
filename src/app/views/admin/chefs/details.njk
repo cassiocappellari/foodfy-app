@@ -6,7 +6,7 @@
 
 {%block styles%}
 <link rel="stylesheet" href="/details.css">
-<link rel="stylesheet" href="/admin.css">
+<link rel="stylesheet" href="/admin/chefs.css">
 {%endblock%}
 
 {%block content%}
@@ -16,13 +16,14 @@
             <h2>Chef: {{chef.name}}</h2>
         </div>
         <div id="button">
-            <a type="button" href="/admin/recipes/{{recipe.id}}/edit">Edit Chef</a>
+            <a type="button" href="/admin/chefs/{{chef.id}}/edit">Edit Chef</a>
         </div>
     </div>
-    <div class="recipes">
-            <div class="recipe-card" id="{{chef.id}}">
+    <div class="chefs">
+            <div class="chef-card" id="{{chef.id}}">
                 <img src="{{chef.avatar_url}}" alt="{{chef.name}}">
                 <h2>{{chef.name}}</h2>
+                <h3>Member since: {{chef.created_at}}</h3>
                 <h4></h4>
             </div>
     </div>
