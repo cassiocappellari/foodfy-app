@@ -29,10 +29,22 @@
             <div>
                 <input
                     type="text"
-                    name="recipeImg"
+                    name="image"
                     placeholder="http://"
-                    value="{{recipe.recipeImg}}"
+                    value="{{recipe.image}}"
                 >
+            </div>
+        </div>
+        <div class="item">
+            <div>Chef</div>
+            <div>
+                <select name="chef">
+                    {%for chef in chefOptions%}
+                        <option value="{{chef.id}}" {%if recipes.chef_id == chef.id%}selected{%endif%}>
+                            {{chef.name}}
+                        </option>
+                    {%endfor%}
+                </select>
             </div>
         </div>
         <div class="item">
@@ -40,18 +52,8 @@
             <div>
                 <input
                     type="text"
-                    name="recipeName"
-                    value="{{recipe.recipeName}}"
-                >
-            </div>
-        </div>
-        <div class="item">
-            <div>Recipe Author</div>
-            <div>
-                <input
-                    type="text"
-                    name="recipeAuthor"
-                    value="{{recipe.recipeAuthor}}"
+                    name="title"
+                    value="{{recipe.title}}"
                 >
             </div>
         </div>
@@ -59,10 +61,10 @@
             <div>Ingredients</div>
             <div id="ingredients">
                 <div class="ingredient">
-                    {%for ingredient in recipe.recipeIngredients%}
+                    {%for ingredient in recipe.ingredients%}
                         <input
                             type="text"
-                            name="recipeIngredients[]"
+                            name="ingredients[]"
                             value="{{ingredient}}"
                         >
                     {%endfor%}
@@ -77,8 +79,8 @@
             <div>
                 <input
                     type="text"
-                    name="recipeTime"
-                    value="{{recipe.recipeTime}}"
+                    name="time"
+                    value="{{recipe.time}}"
                 >
             </div>
         </div>
@@ -86,11 +88,11 @@
             <div>Recipe Prepare</div>
             <div id="preps">
                 <div class="prep">
-                    {%for prep in recipe.recipePrep%}
+                    {%for preparation in recipe.preparation%}
                         <input
                             type="text"
-                            name="recipePrep[]"
-                            value="{{prep}}"
+                            name="preparation[]"
+                            value="{{preparation}}"
                         >
                     {%endfor%}
                 </div>
@@ -102,12 +104,12 @@
         <div class="item">
             <div>
                 <div>
-                    <label for="recipeInfo">Additional Information</label>
+                    <label for="information">Additional Information</label>
                 </div>
                 <textarea 
-                    name="recipeInfo"
+                    name="information"
                 >
-                {{recipe.recipeInfo}}
+                {{recipe.information}}
                 </textarea>
             </div>
         </div>

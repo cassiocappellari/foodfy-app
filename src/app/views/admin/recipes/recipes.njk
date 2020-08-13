@@ -19,15 +19,15 @@
         </div>
     </div>
     <div class="cards">
-        {%for item in items%}
-            <div class="card" id="{{item.id}}">
+        {%for recipe in recipes%}
+            <div class="card" id="{{recipe.id}}">
                 <div>
-                    <img src="{{item.recipeImg}}" alt="{{item.id}}">
+                    <img src="{{recipe.image}}" alt="{{recipe.id}}">
                 </div>
                 <div>
-                    <h3>{{item.recipeName}}</h3>
-                    <h4>by {{item.recipeAuthor}}</h4>
-                    <a href="/admin/recipes/{{item.id}}" id="visualize-recipe">Visualize</a>
+                    <h3>{{recipe.title}}</h3>
+                    <h4>by {{recipe.chefs_name}}</h4>
+                    <a href="/admin/recipes/{{recipe.id}}" id="visualize-recipe">Visualize</a>
                 </div>
             </div>
         {%endfor%}
