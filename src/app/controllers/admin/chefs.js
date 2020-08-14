@@ -1,7 +1,4 @@
-const fs = require('fs')
-const db = require('../../../config/db')
 const {date} = require('../../../lib/useful')
-const data = require('../../../../data.json')
 const Chef = require('../../models/Admin/Chef')
 
 module.exports = {
@@ -45,23 +42,6 @@ module.exports = {
             return res.redirect(`/admin/chefs/${chefs.id}`)
         })
         
-    },
-    details(req, res){
-        const {id} = req.params
-
-        const foundRecipe = data.recipes.find(function(recipe){
-            return id == recipe.id
-        })
-
-        if(!foundRecipe) {
-            res.send('Recipe not found!')
-        }
-
-        const recipe = {
-            ...foundRecipe
-        }
-
-        return res.render('/recipes/details', {recipe})
     },
     put(req, res){
         const keys = Object.keys(req.body)

@@ -11,17 +11,6 @@ module.exports = {
             callback(results.rows)
         })
     },
-    allChefsName(id, callback) {
-        db.query (`
-            SELECT recipes.*, chefs.name AS chefs_name
-            FROM recipes
-            LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
-            WHERE recipes.id = $1`, [id], function(err, results){
-                if(err) throw `Database error! ${err}`
-
-                callback(results.rows[0])
-            })
-    },
     create(data, callback) {
         const query = `
             INSERT INTO recipes (
