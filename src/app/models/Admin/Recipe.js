@@ -79,7 +79,7 @@ module.exports = {
         `
 
         const values = [
-            data.chef_id,
+            data.chef,
             data.image,
             data.title,
             data.ingredients,

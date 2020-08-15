@@ -31,7 +31,7 @@ h2 {
 }
 
 .form-header h2,
-.content2 h2 {
+.content h2 {
     margin: 50px 0 30px 140px;
 }
 
@@ -193,7 +193,7 @@ button[type="button"].add-prep {
     margin: 32px 230px;
 }
 
-.content .chefs .chef-card img {
+.content3 .chefs .chef-card img {
     object-fit: cover;
     width: 200px;
     height: 200px;
@@ -215,4 +215,68 @@ button[type="button"].add-prep {
     font-size: 24px;
     color: var(--green-color);
     margin-bottom: 20px;
+}
+
+.content3 .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    width: 300px;
+    margin-left: 16.4%;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--green-color);
+    line-height: 34px;
+}
+
+.form-header h2,
+.content h2 {
+    margin: 50px 0 30px 220px;
+}
+
+.content3 .details-header h2 {
+    margin: 48px 0 24px 0;
+}
+
+.content3 .cards .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cards .card {
+    position: relative;
+}
+
+.cards .card a#visualize-recipe {
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 14px;
+}
+
+.cards .card a#visualize-recipe:hover {
+    font-weight: bold;
+}
+
+.content3 .cards .card img {
+    object-fit: cover;
+    width: 278px;
+    height: 120px;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.content3 .cards .card h3 {
+    font-size: 18px;
+    color: var(--green-color);
+    margin-top: 1.8% 0 0.5% 0;
+    width: 200px;
+}
+
+.content3 .cards .card h4 {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #777777;
+    margin: 4px 0 8px 0;
 }

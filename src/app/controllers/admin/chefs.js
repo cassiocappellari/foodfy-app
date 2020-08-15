@@ -13,9 +13,12 @@ module.exports = {
 
             Chef.findTotalRecipes(chef.id, function(recipe){
 
-                chef.created_at = date(chef.created_at).format
-    
-                return res.render('admin/chefs/details', {chef, recipe})
+                Chef.findRecipes(chef.id, function(recipes){
+
+                    chef.created_at = date(chef.created_at).format
+        
+                    return res.render('admin/chefs/details', {chef, recipe, recipes})
+                })
             })
         })
     },
