@@ -10,7 +10,7 @@
 {%endblock%}
 
 {%block content%}
-<section class="content3" id="content-details">
+<section class="content" id="content-details">
     <div class="details-header">
         <div>
             <h2>Chef: {{chef.name}}</h2>
@@ -27,6 +27,9 @@
                 <h4>{{recipe.total_recipes}} recipes</h4>
             </div>
     </div>
+    <div>
+        <h2>Recipes</h2>
+    </div>
     <div class="cards">
             {%for recipe in recipes%}
                 <div class="card" id="{{recipe.id}}">
@@ -36,7 +39,7 @@
                     <div>
                         <h3>{{recipe.title}}</h3>
                         <h4>by {{recipe.chefs_name}}</h4>
-                        <a href="/admin/recipes/{{recipes.id}}" id="visualize-recipe">Visualize</a>
+                        <a href="/admin/recipes/{{recipe.id}}" id="visualize-recipe">Visualize</a>
                     </div>
                 </div>
             {%endfor%}
