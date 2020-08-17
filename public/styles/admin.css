@@ -100,6 +100,10 @@ button[type="submit"]#delete-button {
     margin-right: 0;
 }
 
+.create-form {
+    margin-bottom: 163px;
+}
+
 .create-form .item {
     margin-left: 16.4%;
     margin-bottom: 4%;

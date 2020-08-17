@@ -2,12 +2,6 @@
     position: relative;
 }
 
-/*footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}*/
-
 :root {
     --main-color: #111111;
     --green-color: #2EA652;
@@ -15,6 +9,10 @@
 
 header nav a#chefs {
     font-weight: bold;
+}
+
+.content2 {
+    margin-bottom: 176px;
 }
 
 .content2 .cards {
@@ -255,4 +253,8 @@ button[type="button"].add-prep {
     font-weight: lighter;
     color: #777777;
     margin: 4px 0 8px 0;
+}
+
+.footer-box {
+    margin-top: auto;
 }
