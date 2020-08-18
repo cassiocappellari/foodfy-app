@@ -60,8 +60,17 @@ module.exports = {
         })
     },
     delete(req, res){
-        Chef.delete(req.body.id, function() {
-            return res.redirect(`/admin/chefs`)
+        Chef.totalRecipesByChef(req.params.id, function(chef){
+            
+            let {total_recipes} = chef
+
+            const totalRecipes = total_recipes
+
+            console.log(totalRecipes)
         })
     }
 }
+
+/*Chef.delete(req.body.id, function() {
+    return res.redirect(`/admin/chefs`)
+})*/

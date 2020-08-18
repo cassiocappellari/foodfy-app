@@ -11,7 +11,7 @@
 {%block content%}
 
 <section class="create-form">
-    <form action="/admin/chefs?_method=DELETE" method="POST" id="delete-form">
+    <form id="chef-delete" action="/admin/chefs?_method=DELETE" method="POST" id="delete-form">
         <input type="hidden" name="id" value="{{chef.id}}">
         <button type="submit" id="delete-button">Delete Chef</button>
     </form>

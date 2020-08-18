@@ -29,3 +29,15 @@ function addPrep() {
 document
     .querySelector(".add-prep")
     .addEventListener("click", addPrep)
+
+/*const chefDeleteOption = document.querySelector('#chef-delete')
+
+if(chefDeleteOption) {
+    const totalRecipes = document.querySelector('#total-recipes').textContent
+    chefDeleteOption.addEventListener('submit', function(event){
+        if(totalRecipes.includes('0 recipes')) {
+            alert('Não é possível deletar!')
+            event.preventDefault()
+        }
+    })
+}*/

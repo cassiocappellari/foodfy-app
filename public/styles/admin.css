@@ -114,10 +114,16 @@ textarea {
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    border-radius: 4px;
     width: 940px;
     height: 24px;
     margin-bottom: 6px;
+    padding: 10px;
+}
+
+.create-form .item select {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 965px;
     padding: 10px;
 }
 
