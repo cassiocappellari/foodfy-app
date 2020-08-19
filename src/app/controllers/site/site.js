@@ -1,6 +1,4 @@
-const data = require('../../../../data.json')
 const Site = require('../../models/Site/Site')
-const db = require('../../../config/db')
 
 module.exports = {
     index(req, res){

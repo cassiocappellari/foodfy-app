@@ -17,22 +17,5 @@ module.exports = {
 
                 callback(results.rows[0])
             })
-    },
-    details(req, res){
-        const {id} = req.params
-
-        const foundRecipe = data.recipes.find(function(recipe){
-            return id == recipe.id
-        })
-
-        if(!foundRecipe) {
-            res.send('Recipe not found!')
-        }
-
-        const recipe = {
-            ...foundRecipe
-        }
-
-        return res.render('site/recipes/details', {item: recipe})
     }
 }
