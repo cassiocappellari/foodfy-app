@@ -21,6 +21,34 @@ header {
 
 header nav {
     display: flex;
+    align-items: center;
+}
+
+header nav form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    grid-gap: 8px;
+    margin: 12px 0 0 32px;
+}
+
+header nav form button {
+    background-color: var(--green-color);
+    color: var(--main-color);
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 32px;
+}
+
+header nav form input {
+    border: 1px solid #eee;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 header nav a {

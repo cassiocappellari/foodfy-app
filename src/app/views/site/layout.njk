@@ -18,7 +18,16 @@
                 <a href="/" id="logo"><img src="/logo-white.png" alt="Logo Foodfy"></a>
                 <a href="/about" id="about">About</a>
                 <a href="/recipes" id="recipes">Recipes</a>
-                <a href="/admin/recipes" id="admin">Admin Area</a>
+                <a href="/" id="chefs">Chefs</a>
+                <form action="/recipes" method="GET">
+                    <input
+                        type="text"
+                        name="filter"
+                        placeholder="Search recipe"
+                        value="{{filter}}"
+                    >
+                    <button type="submit">Search</button>
+                </form>
             </nav>
         </header>
 

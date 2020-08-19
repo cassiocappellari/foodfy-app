@@ -20,5 +20,14 @@ module.exports = {
 
                 callback(results.rows[0])
             })
+    },
+    findBy(filter, callback) {
+        db.query(`
+            SELECT * FROM recipes
+            WHERE recipes.title ILIKE '%${filter}%'`, function(err, results) {
+                if(err) throw `Database error! ${err}`
+    
+                callback(results.rows)
+            })
     }
 }
