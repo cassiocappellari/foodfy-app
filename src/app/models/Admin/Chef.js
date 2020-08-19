@@ -95,7 +95,7 @@ module.exports = {
         GROUP BY chefs.id`, [id], function(err, results) {
             if(err) throw `Database error! ${err}`
 
-            callback(results.rows)
+            callback(results.rows[0])
         })
     },
     delete(id, callback) {

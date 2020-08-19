@@ -11,16 +11,16 @@
 {%block content%}
 <section class="content">
     <div class="recipes">
-            <div class="recipe-card" id="{{item.id}}">
-                <img src="{{item.recipeImg}}" alt="{{item.id}}">
-                <h2>{{item.recipeName}}</h2>
-                <h4>by {{item.recipeAuthor}}</h4>
+            <div class="recipe-card" id="{{recipe.id}}">
+                <img src="{{recipe.image}}" alt="{{recipe.id}}">
+                <h2>{{recipe.title}}</h2>
+                <h4>by {{recipe.chef_id}}</h4>
             </div>
             <div class="recipes-content">
                 <div class="recipe-ingredients">
                     <h3>Ingredients <a id="button1">HIDE</a></h3>
                     <ul>
-                    {%for ingredient in item.recipeIngredients%}
+                    {%for ingredient in recipe.ingredients%}
                         <li>{{ingredient}}</li>
                     {%endfor%}
                     </ul>
@@ -28,14 +28,14 @@
                 <div class="recipe-preparation">
                     <h3>How To Prepare <a id="button2">HIDE</a></h3>
                     <ul>
-                    {%for prep in item.recipePrep%}
-                        <li>{{prep}}</li>
+                    {%for preparation in recipe.preparation%}
+                        <li>{{preparation}}</li>
                     {%endfor%}
                     </ul>
                 </div>
                 <div class="recipe-information">
                     <h3>Additional Information <a id="button3">HIDE</a></h3>
-                    <p>{{item.recipeInfo}}</p>
+                    <p>{{recipe.information}}</p>
                 </div>
             </div>
     </div>

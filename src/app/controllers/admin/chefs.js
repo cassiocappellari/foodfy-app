@@ -64,13 +64,9 @@ module.exports = {
             
             let {total_recipes} = chef
 
-            const totalRecipes = total_recipes
-
-            console.log(totalRecipes)
+            Chef.delete(req.body.id, function() {
+                return res.redirect(`/admin/chefs`)
+            })
         })
     }
 }
-
-/*Chef.delete(req.body.id, function() {
-    return res.redirect(`/admin/chefs`)
-})*/
