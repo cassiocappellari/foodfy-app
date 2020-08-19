@@ -9,17 +9,8 @@
 {%endblock%}
 
 {%block content%}
-<section class="content1">
-    <div class="content">
-        <h1>The Best Recipes</h1>
-        <p>Learn how to build the best dishes with recipes created by professionals from all over the world.</p>
-    </div>
-    <div class="img-background">
-        <img src="/main-logo.svg" alt="Chef Foodfy">
-    </div>
-</section>
 <section class="content2">
-    <h2>Our Recipes</h2>
+    <h2>Searching for "{{filter}}"</h2>
     <div class="cards">
         {%for recipe in recipes%}
         <div class="card" id="{{recipe.id}}">
