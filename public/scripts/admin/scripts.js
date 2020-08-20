@@ -1,3 +1,12 @@
+const cards = document.querySelectorAll(".card")
+
+for (let card of cards) {
+    card.addEventListener("click", function() {
+        const chefId = card.getAttribute('id')
+        window.location.href = `/chefs/${chefId}`
+    })
+}
+
 function addIngredient() {
     const ingredients = document.querySelector("#ingredients")
     const fieldContainer = document.querySelectorAll(".ingredient")
@@ -29,15 +38,3 @@ function addPrep() {
 document
     .querySelector(".add-prep")
     .addEventListener("click", addPrep)
-
-/*const chefDeleteOption = document.querySelector('#chef-delete')
-
-if(chefDeleteOption) {
-    const totalRecipes = document.querySelector('#total-recipes').textContent
-    chefDeleteOption.addEventListener('submit', function(event){
-        if(totalRecipes.includes('0 recipes')) {
-            alert('Não é possível deletar!')
-            event.preventDefault()
-        }
-    })
-}*/

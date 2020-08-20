@@ -22,6 +22,11 @@ header nav a#chefs {
     margin: 0 10%;
 }
 
+.content2 .card:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
 h2 {
     font-size: 24px;
     color: var(--green-color);
@@ -57,6 +62,10 @@ h2 {
     font-weight: bold;
 }
 
+.content2#chefs-content {
+    margin: 50px 0 240px 0;
+}
+
 .content2 .cards .card img {
     object-fit: cover;
     width: 64px;
@@ -70,6 +79,13 @@ h2 {
     color: var(--green-color);
     margin-top: 1.8% 0 0.5% 0;
     width: 200px;
+}
+
+.content2 .cards .card h4 {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #777777;
+    margin: 4px 0 8px 0;
 }
 
 form #delete-form {
@@ -177,7 +193,7 @@ button[type="button"].add-prep {
 }
 
 .content#content-details {
-    margin: 0 230px 32px 230px;
+    margin: 32px 230px 32px 230px;
 }
 
 .content {

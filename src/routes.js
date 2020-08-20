@@ -6,9 +6,11 @@ const adminChefsRoutes = require('./app/controllers/admin/chefs')
 
 routes.get('/', siteRoutes.index)
 routes.get('/recipes', siteRoutes.recipes)
+routes.get('/chefs', siteRoutes.chefs)
 routes.get('/search', siteRoutes.search)
 routes.get('/about', siteRoutes.about)
 routes.get('/details/:id', siteRoutes.details)
+routes.get('/chefs/:id', siteRoutes.show)
 
 routes.get('/admin/recipes', adminRecipesRoutes.index)
 routes.get('/admin/recipes/create', adminRecipesRoutes.create)

@@ -1,0 +1,41 @@
+{%extends 'site/layout.njk'%}
+
+{%block head%}
+<title>Foodfy</title>
+{%endblock%}
+
+{%block styles%}
+<link rel="stylesheet" href="/details.css">
+<link rel="stylesheet" href="/chefs.css">
+{%endblock%}
+
+{%block content%}
+<section class="content" id="content-details">
+    <div class="chefs">
+            <div class="chef-card" id="{{chef.id}}">
+                <img src="{{chef.avatar_url}}" alt="{{chef.name}}">
+                <h2>{{chef.name}}</h2>
+                <h3>Member since: {{chef.created_at}}</h3>
+                <h4 id="total-recipes">{{recipe.total_recipes}} recipes</h4>
+            </div>
+    </div>
+    <div>
+        <h2>Recipes</h2>
+    </div>
+    <div class="cards">
+            {%for recipe in recipes%}
+                <div class="card" id="{{recipe.id}}">
+                    <div>
+                        <img src="{{recipe.image}}" alt="{{recipe.id}}">
+                    </div>
+                    <div>
+                        <div class="preparation-time">{{recipe.time}}</div>
+                        <h3>{{recipe.title}}</h3>
+                        <h4>by {{recipe.chefs_name}}</h4>
+                    </div>
+                </div>
+        {%endfor%}
+    </div>
+</section>
+<script src="/site/scripts.js"></script>
+{%endblock%}
