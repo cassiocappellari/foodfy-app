@@ -29,7 +29,7 @@ header nav form {
     grid-template-columns: 1fr 120px;
     align-items: center;
     grid-gap: 8px;
-    margin: 12px 0 0 32px;
+    margin: 12px 0 0 80px;
 }
 
 header nav form button {
@@ -42,6 +42,10 @@ header nav form button {
     cursor: pointer;
     border-radius: 4px;
     height: 32px;
+}
+
+header nav form button:hover {
+    opacity: 0.7;
 }
 
 header nav form input {
@@ -67,30 +71,20 @@ header nav a img {
 }
 
 header nav a#logo {
-    margin-left: 230px;
+    margin-left: 180px;
 }
 
 header nav a#about {
-    margin-left: 124px;
     margin-top: 30px;
     width: 42px;
 }
 
-header nav a#recipes {
-    margin-left: 30px;
-    margin-top: 30px;
-    width: 58px;
-}
-
-header nav a#chefs {
-    margin-left: 30px;
-    margin-top: 30px;
-    width: 58px;
-}
-
+header nav a#recipes,
+header nav a#chefs,
 header nav a#admin {
-    margin-left: 340px;
+    margin-left: 30px;
     margin-top: 30px;
+    width: 58px;
 }
 
 header nav a:hover {
