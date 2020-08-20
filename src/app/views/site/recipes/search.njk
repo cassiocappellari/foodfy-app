@@ -9,8 +9,8 @@
 {%endblock%}
 
 {%block content%}
-<section class="content2">
-    <h2>Searching for "{{filter}}"</h2>
+<section class="content2" id="search-content">
+    <h2 id="search-filter">Searching for "{{filter}}"</h2>
     <div class="cards">
         {%for recipe in recipes%}
         <div class="card" id="{{recipe.id}}">

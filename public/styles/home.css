@@ -40,11 +40,19 @@
     margin: 14.4% 0 0 0;
 }
 
+.content2#search-content {
+    margin-bottom: 195px;
+}
+
 .content2 h2 {
     margin: 0 0 1.8% 16.4%;
     font-size: 24px;
     line-height: 34px;
     color: var(--green-color);
+}
+
+.content2 h2#search-filter {
+    margin: 52px 0 0 194px;
 }
 
 .content2 .cards {
