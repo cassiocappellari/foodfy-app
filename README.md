@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-    <img src="./public/assets/preview-foodfy.gif">
+    <img src="./public/assets/foodfy-gif.gif">
 </h2>
 
 ---
