@@ -60,13 +60,16 @@ module.exports = {
         })
     },
     delete(req, res){
-        Chef.totalRecipesByChef(req.params.id, function(chef){
+        Chef.totalRecipesByChef(req.body.id, function(chef){
             
-            let {total_recipes} = chef
+            if(chef.total_recipes > 0) {
+                return res.send('Não é possível deletar chefs com receitas cadastradas!')
+            } else {
+                Chef.delete(req.body.id, function() {
+                    return res.redirect(`/admin/chefs`)
+                })
+            }
 
-            Chef.delete(req.body.id, function() {
-                return res.redirect(`/admin/chefs`)
-            })
         })
     }
 }
