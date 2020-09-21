@@ -25,14 +25,25 @@
             </div>
         </div>
         <div class="item">
-            <div>Recipe Image</div>
+            <div>Recipe Images</div>
             <div>
-                <input
-                    type="text"
-                    name="image"
-                    placeholder="http://"
-                    value="{{recipe.image}}"
-                >
+                <div id="photos-upload">
+                    <input
+                        type="file"
+                        name="photos"
+                        id="photos-input"
+                        multiple
+                        accept="image/*"
+                    >
+                    <button>
+                        <i class="material-icons">
+                            add
+                        </i>
+                    </button>
+                </div>
+                <div id="photos-preview">
+
+                </div>
             </div>
         </div>
         <div class="item">
