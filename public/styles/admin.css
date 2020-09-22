@@ -190,6 +190,10 @@ button[type="button"].add-prep {
     margin: 0 230px 32px 230px;
 }
 
+form .item #photos-upload {
+    position: relative;
+}
+
 form .item #photos-upload button {
     border: 1px solid #DDDDDD;
     width: 149px;
@@ -206,7 +210,7 @@ form .item #photos-input {
     cursor: pointer;
     display: block;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    width: 135px;
+    height: 135px;
     opacity: 0;
 }
