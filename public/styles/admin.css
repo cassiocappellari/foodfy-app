@@ -190,6 +190,12 @@ button[type="button"].add-prep {
     margin: 0 230px 32px 230px;
 }
 
+form .item .photos-header {
+    display: grid;
+    grid-template-columns: 160px 120px;
+    align-items: center;
+}
+
 form .item #photos-upload {
     position: relative;
 }
@@ -213,4 +219,21 @@ form .item #photos-input {
     width: 135px;
     height: 135px;
     opacity: 0;
+}
+
+form .item #photos-preview {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+
+    width: 100%;
+    margin: 8px 0;
+}
+
+form .item #photos-preview img {
+    border: 1px solid #DDDDDD;
+    width: 149px;
+    height: 149px;
+    border-radius: 4px;
+    object-fit: cover;
 }
