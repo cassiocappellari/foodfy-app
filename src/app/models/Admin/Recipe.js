@@ -11,6 +11,22 @@ module.exports = {
             callback(results.rows)
         })
     },
+    createImg(filename, path) {
+        const query = `
+            INSERT INTO files (
+                name,
+                path
+            ) VALUES ($1, $2)
+            RETURNING id
+        `
+
+        const values = [
+            filename,
+            path
+        ]
+
+        return db.query(query, values)
+    },
     create(data, callback) {
         const query = `
             INSERT INTO recipes (

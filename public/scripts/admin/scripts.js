@@ -60,9 +60,11 @@ const PhotosUpload = {
             }
             reader.readAsDataURL(file)
         })
+
+        PhotosUpload.input.files = PhotosUpload.getAllFiles()
     },
     hasLimit(event) {
-        const {uploadLimit, input} = PhotosUpload
+        const {uploadLimit, input, preview} = PhotosUpload
         const {files: fileList} = input
 
         if(fileList.length > uploadLimit) {
@@ -70,7 +72,28 @@ const PhotosUpload = {
             event.preventDefault()
             return true
         }
+
+        const photosDiv = []
+        preview.childNodes.forEach(item => {
+            if(item.classList && item.classList.value == 'photo')
+            photosDiv.push(item)
+        })
+
+        const totalPhotos = fileList.length + photosDiv.length
+        if(totalPhotos > uploadLimit) {
+            alert('You reach the maximum number of pictures!')
+            event.preventDefault()
+            return true
+        }
+
         return false
+    },
+    getAllFiles() {
+        const dataTransfer = new ClipboardEvent('').clipboardData || new DataTransfer()
+
+        PhotosUpload.files.forEach(file => dataTransfer.items.add(file))
+
+        return dataTransfer.files
     },
     getContainer(image) {
         const div = document.createElement('div')
@@ -92,6 +115,9 @@ const PhotosUpload = {
         const photoDiv = event.target.parentNode
         const photosArray = Array.from(PhotosUpload.preview.children)
         const index = photosArray.indexOf(photoDiv)
+
+        PhotosUpload.files.splice(index, 1)
+        PhotosUpload.input.files = PhotosUpload.getAllFiles()
 
         photoDiv.remove()
     }
