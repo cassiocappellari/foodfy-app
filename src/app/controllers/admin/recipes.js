@@ -31,18 +31,20 @@ module.exports = {
     async post(req, res){
         const keys = Object.keys(req.body)
 
-        console.log(req.body)
-
         for(let key of keys) {
             if(req.body[key] == '') {
                 return res.send('Please, fill all the fields!')
             }
         }
 
-        let resultsImg = await File.create(req.body)
         
         let results = await Recipe.create(req.body)
         const recipeId = results.rows[0].id
+
+        const filesPromise = req.files.map(file => File.create({
+            ...file
+        }))
+        await Promise.all(filesPromise)
 
         return res.redirect(`/admin/recipes/${recipeId}`)
     },
