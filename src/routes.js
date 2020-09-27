@@ -18,8 +18,8 @@ routes.get('/admin/recipes/create', adminRecipesRoutes.create)
 routes.get('/admin/recipes/:id', adminRecipesRoutes.show)
 routes.get('/admin/recipes/:id/edit', adminRecipesRoutes.edit)
 
-routes.post('/admin/recipes', multer.array('photos', 5), adminRecipesRoutes.post)
-routes.put('/admin/recipes', multer.array('photos', 5), adminRecipesRoutes.put)
+routes.post('/admin/recipes', multer.array("photos", 5), adminRecipesRoutes.post)
+routes.put('/admin/recipes', multer.array("photos", 5), adminRecipesRoutes.put)
 routes.delete('/admin/recipes', adminRecipesRoutes.delete)
 
 routes.get('/admin/chefs', adminChefsRoutes.index)

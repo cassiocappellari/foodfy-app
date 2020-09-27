@@ -1,4 +1,5 @@
 const Recipe = require('../../models/Admin/Recipe')
+const File = require('../../models/Admin/File')
 
 module.exports = {
     index(req, res){
@@ -27,8 +28,10 @@ module.exports = {
             return res.render('admin/recipes/create', {chefOptions: options})
         })
     },
-    post(req, res){
+    async post(req, res){
         const keys = Object.keys(req.body)
+
+        console.log(req.body)
 
         for(let key of keys) {
             if(req.body[key] == '') {
@@ -36,9 +39,12 @@ module.exports = {
             }
         }
 
-        Recipe.create(req.body, function(recipe) {
-            return res.redirect(`/admin/recipes/${recipe.id}`)
-        })
+        let resultsImg = await File.create(req.body)
+        
+        let results = await Recipe.create(req.body)
+        const recipeId = results.rows[0].id
+
+        return res.redirect(`/admin/recipes/${recipeId}`)
     },
     put(req, res){
         const keys = Object.keys(req.body)
