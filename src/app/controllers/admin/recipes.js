@@ -1,5 +1,6 @@
 const Recipe = require('../../models/Admin/Recipe')
 const File = require('../../models/Admin/File')
+const RecipeFiles = require('../../models/Admin/RecipeFiles')
 
 module.exports = {
     index(req, res){
@@ -37,14 +38,17 @@ module.exports = {
             }
         }
 
-        
         let results = await Recipe.create(req.body)
         const recipeId = results.rows[0].id
 
-        const filesPromise = req.files.map(file => File.create({
-            ...file
-        }))
-        await Promise.all(filesPromise)
+        const filesPromise = req.files.map(file => File.create({...file}))
+        const filesResult = await Promise.all(filesPromise)
+
+        const recipeFiles = filesResult.map(file => {
+            const fileId = file.rows[0].id
+            RecipeFiles.create(recipeId, fileId)
+        })
+        await Promise.all(recipeFiles)
 
         return res.redirect(`/admin/recipes/${recipeId}`)
     },
