@@ -23,7 +23,7 @@
     <div class="cards">
         {%for recipe in recipes%}
         <div class="card" id="{{recipe.id}}">
-            <img src="{{recipe.image}}" alt="{{recipe.id}}">
+            <img src="{{recipe.src}}" alt="{{recipe.id}}">
             <div class="preparation-time">{{recipe.time}}</div>
             <h3>{{recipe.title}}</h3>
             <h4>by {{recipe.chefs_name}}</h4>

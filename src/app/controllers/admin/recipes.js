@@ -8,12 +8,28 @@ module.exports = {
             return res.render('admin/recipes/recipes', {recipes})
         })
     },
-    show(req, res){
-        Recipe.find(req.params.id, function(recipe) {
-            if(!recipe) return res.send('Recipe not found!')
+    async show(req, res){
+        let results = await Recipe.find(req.params.id)
+        const recipe = results.rows[0]
 
-            return res.render('admin/recipes/details', {recipe})
-        })
+        if(!recipe) return res.send('Recipe not found!')
+
+        results = await RecipeFiles.getFilesIds(recipe.id)
+        const fileIds = results.rows
+
+        const filesPromises = fileIds.map(id => RecipeFiles.getFiles(id.file_id))
+        const files = await Promise.all(filesPromises)
+
+        const recipeFiles = files[0].rows.map(file => ({
+            ...file,
+            src: `${req.protocol}://${req.headers.host}${file.path.replace("public/images", "")}`
+        }))
+
+        const images = recipeFiles[0]
+
+        console.log(images)
+
+        return res.render('admin/recipes/details', {recipe, images})
     },
     edit(req, res){
         Recipe.find(req.params.id, function(recipe) {
