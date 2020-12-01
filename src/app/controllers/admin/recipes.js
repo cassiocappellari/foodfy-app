@@ -3,10 +3,11 @@ const File = require('../../models/Admin/File')
 const RecipeFiles = require('../../models/Admin/RecipeFiles')
 
 module.exports = {
-    index(req, res){
-        Recipe.all(function(recipes) {
-            return res.render('admin/recipes/recipes', {recipes})
-        })
+    async index(req, res){
+        let results = await Recipe.all()
+        const recipes = results.rows
+
+        return res.render('admin/recipes/recipes', {recipes})
     },
     async show(req, res){
         let results = await Recipe.find(req.params.id)
