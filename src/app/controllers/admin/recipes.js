@@ -28,23 +28,22 @@ module.exports = {
 
         const images = recipeFiles[0]
 
-        console.log(images)
-
         return res.render('admin/recipes/details', {recipe, images})
     },
-    edit(req, res){
-        Recipe.find(req.params.id, function(recipe) {
-            if(!recipe) return res.send('Recipe not found!')
+    async edit(req, res){
+        const recipe = await Recipe.find(req.params.id)
+        if(!recipe) return res.send('Recipe not found!')
 
-            Recipe.chefsSelectOptions(function(options){
-                return res.render('admin/recipes/edit', {recipe, chefOptions: options})
-            })
-        })
+        const results = await Recipe.chefsSelectOptions()
+        const options = results.rows
+
+        return res.render('admin/recipes/edit', {recipe, chefOptions: options})
     },
-    create(req, res){
-        Recipe.chefsSelectOptions(function(options) {
-            return res.render('admin/recipes/create', {chefOptions: options})
-        })
+    async create(req, res){
+        const results = await Recipe.chefsSelectOptions()
+        options = results.rows
+
+        return res.render('admin/recipes/create', {chefOptions: options})
     },
     async post(req, res){
         const keys = Object.keys(req.body)

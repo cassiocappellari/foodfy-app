@@ -81,12 +81,8 @@ module.exports = {
             callback()
         })
     },
-    chefsSelectOptions(callback) {
-        db.query(`SELECT name, id FROM chefs`, function(err, results){
-            if(err) throw `Database error! ${err}`
-
-            callback(results.rows)
-        })
+    chefsSelectOptions() {
+        return db.query(`SELECT name, id FROM chefs`)
     },
     delete(id, callback) {
         db.query(`DELETE FROM recipes WHERE id = $1`, [id], function(err, results) {
