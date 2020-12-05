@@ -28,5 +28,20 @@ module.exports = {
         ]
 
         return db.query(query, values)
+    },
+    update(recipe_id, file_id) {
+        const query = `
+            UPDATE recipe_files SET
+                recipe_id=($1),
+                file_id=(2)
+            WHERE id = $3
+        `
+
+        const values = [
+            recipe_id,
+            file_id
+        ]
+
+        return db.query(query, values)
     }
 }

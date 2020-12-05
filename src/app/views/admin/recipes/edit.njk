@@ -34,6 +34,7 @@
                         id="photos-input"
                         multiple
                         accept="image/*"
+                        onchange="PhotosUpload.handleFileInput(event)"
                     >
                     <button>
                         <i class="material-icons">
@@ -42,6 +43,7 @@
                     </button>
                 </div>
                 <div id="photos-preview">
+                    <img src="{{images.src}}" alt="{{images.name}}">
                 </div>
             </div>
         </div>
@@ -116,11 +118,7 @@
                 <div>
                     <label for="information">Additional Information</label>
                 </div>
-                <textarea 
-                    name="information"
-                >
-                {{recipe.information}}
-                </textarea>
+                <textarea name="information">{{recipe.information}}</textarea>
             </div>
         </div>
         <input

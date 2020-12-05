@@ -31,13 +31,28 @@ module.exports = {
         return res.render('admin/recipes/details', {recipe, images})
     },
     async edit(req, res){
-        const recipe = await Recipe.find(req.params.id)
+        let recipeResults = await Recipe.find(req.params.id)
+        const recipe = recipeResults.rows[0]
+
         if(!recipe) return res.send('Recipe not found!')
 
-        const results = await Recipe.chefsSelectOptions()
-        const options = results.rows
+        let chefResults = await Recipe.chefsSelectOptions()
+        const options = chefResults.rows
 
-        return res.render('admin/recipes/edit', {recipe, chefOptions: options})
+        results = await RecipeFiles.getFilesIds(recipe.id)
+        const fileIds = results.rows
+
+        const filesPromises = fileIds.map(id => RecipeFiles.getFiles(id.file_id))
+        const files = await Promise.all(filesPromises)
+
+        const recipeFiles = files[0].rows.map(file => ({
+            ...file,
+            src: `${req.protocol}://${req.headers.host}${file.path.replace("public/images", "")}`
+        }))
+
+        const images = recipeFiles[0]
+
+        return res.render('admin/recipes/edit', {recipe, chefOptions: options, images})
     },
     async create(req, res){
         const results = await Recipe.chefsSelectOptions()
@@ -68,7 +83,7 @@ module.exports = {
 
         return res.redirect(`/admin/recipes/${recipeId}`)
     },
-    put(req, res){
+    async put(req, res){
         const keys = Object.keys(req.body)
 
         for(let key of keys) {
@@ -77,13 +92,15 @@ module.exports = {
             }
         }
 
-        Recipe.update(req.body, function() {
-            return res.redirect(`/admin/recipes/${req.body.id}`)
-        })
+        await Recipe.update(req.body)
+
+        return res.redirect(`/admin/recipes/${req.body.id}`)
     },
-    delete(req, res){
-        Recipe.delete(req.body.id, function() {
-            return res.redirect(`/admin/recipes`)
-        })
+    async delete(req, res){
+        await Recipe.delete(req.body.id)
+
+        console.log(req.body.id)
+
+        return res.redirect(`/admin/recipes`)
     }
 }
