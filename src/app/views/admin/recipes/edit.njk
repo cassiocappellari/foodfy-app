@@ -11,11 +11,11 @@
 {%block content%}
 
 <section class="create-form">
-    <form action="/admin/recipes?_method=DELETE" method="POST" id="delete-form" enctype="multipart/form-data>
+    <form action="/admin/recipes?_method=DELETE" method="POST" id="delete-form">
         <input type="hidden" name="id" value="{{recipe.id}}">
         <button type="submit" id="delete-button">Delete Recipe</button>
     </form>
-    <form action="/admin/recipes?_method=PUT" method="POST">
+    <form action="/admin/recipes?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="form-header">
             <div>
                 <h2>Create Recipe</h2>

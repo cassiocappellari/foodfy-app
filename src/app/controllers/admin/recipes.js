@@ -97,10 +97,10 @@ module.exports = {
         return res.redirect(`/admin/recipes/${req.body.id}`)
     },
     async delete(req, res){
-        await Recipe.delete(req.body.id)
-
-        console.log(req.body.id)
-
+        await Recipe.deleteRecipeId(req.body.id)
+        await Recipe.deleteRecipeFIle(req.body.id)
+        await Recipe.deleteRecipe(req.body.id)
+        
         return res.redirect(`/admin/recipes`)
     }
 }

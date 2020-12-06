@@ -3,9 +3,11 @@ const {date} = require('../../../lib/useful')
 
 module.exports = {
     all() {
-        return db.query(`SELECT recipes.*, chefs.name AS chefs_name
+        return db.query(`
+        SELECT recipes.*, chefs.name AS chefs_name
         FROM recipes
-        LEFT JOIN chefs ON (recipes.chef_id = chefs.id)`)
+        LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
+        `)
     },
     create(data) {
         const query = `
@@ -38,7 +40,8 @@ module.exports = {
             SELECT recipes.*, chefs.name AS chefs_name
             FROM recipes
             LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
-            WHERE recipes.id = $1`, [id])
+            WHERE recipes.id = $1
+            `, [id])
     },
     findTotalRecipes(id, callback) {
         db.query(`SELECT recipes.*, count(recipes) AS total_recipes
@@ -76,9 +79,27 @@ module.exports = {
         return db.query(query, values)
     },
     chefsSelectOptions() {
-        return db.query(`SELECT name, id FROM chefs`)
+        return db.query(`
+        SELECT name, id
+        FROM chefs
+        `)
     },
-    delete(id) {
-        return db.query(`DELETE FROM recipes WHERE id = $1`, [id])
+    deleteRecipe(id) {
+        return db.query(`
+        DELETE FROM recipes
+        WHERE id = $1
+        `, [id])
+    },
+    deleteRecipeId(id) {
+        return db.query(`
+        DELETE FROM recipe_files
+        WHERE recipe_id = $1
+        `, [id])
+    },
+    deleteRecipeFIle(id) {
+        return db.query(`
+        DELETE FROM recipe_files
+        WHERE file_id = $1
+        `, [id])
     }
 }
