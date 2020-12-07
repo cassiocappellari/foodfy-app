@@ -7,7 +7,16 @@ module.exports = {
         let results = await Recipe.all()
         const recipes = results.rows
 
-        return res.render('admin/recipes/recipes', {recipes})
+        let fileResults = await RecipeFiles.getAllFiles()
+        const fileIds = fileResults
+
+        const recipeFiles = fileIds.rows.map(file => ({
+            ...file,
+            src: `${req.protocol}://${req.headers.host}${file.path.replace("public/images", "")}`
+        }))
+        const images = recipeFiles
+
+        return res.render('admin/recipes/recipes', {recipes, images})
     },
     async show(req, res){
         let results = await Recipe.find(req.params.id)

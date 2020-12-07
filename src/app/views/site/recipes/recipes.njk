@@ -12,12 +12,14 @@
 <section class="content2">
     <div class="cards">
         {%for recipe in recipes%}
-        <div class="card" id="{{recipe.id}}">
-            <img src="{{recipe.image}}" alt="{{recipe.id}}">
-            <div class="preparation-time">{{recipe.time}}</div>
-            <h3>{{recipe.title}}</h3>
-            <h4>by {{recipe.chefs_name}}</h4>
-        </div>
+            <div class="card" id="{{recipe.id}}">
+                {%for image in images%}
+                    <img src="{{image.src}}" alt="{{image.id}}">
+                {%endfor%}
+                <div class="preparation-time">{{recipe.time}}</div>
+                <h3>{{recipe.title}}</h3>
+                <h4>by {{recipe.chefs_name}}</h4>
+            </div>
         {%endfor%}
     </div>
 </section>

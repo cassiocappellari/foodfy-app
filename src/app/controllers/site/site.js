@@ -1,16 +1,39 @@
 const Site = require('../../models/Site/Site')
+const Recipe = require('../../models/Admin/Recipe')
+const File = require('../../models/Admin/File')
+const RecipeFiles = require('../../models/Admin/RecipeFiles')
 const {date} = require('../../../lib/useful')
 
 module.exports = {
-    index(req, res){
-        Site.all(function(recipes){
-            return res.render('site/recipes/index', {recipes})
-        })           
+    async index(req, res){
+        let results = await Site.all()
+        const recipes = results.rows
+
+        let fileResults = await RecipeFiles.getAllFiles()
+        const fileIds = fileResults
+
+        const recipeFiles = fileIds.rows.map(file => ({
+            ...file,
+            src: `${req.protocol}://${req.headers.host}${file.path.replace("public/images", "")}`
+        }))
+        const images = recipeFiles
+
+        return res.render('site/recipes/index', {recipes, images})          
     },
-    recipes(req, res){
-        Site.all(function(recipes){
-            return res.render('site/recipes/recipes', {recipes})
-        })
+    async recipes(req, res){
+        const results = await Site.all()
+        const recipes = results.rows
+
+        let fileResults = await RecipeFiles.getAllFiles()
+        const fileIds = fileResults
+
+        const recipeFiles = fileIds.rows.map(file => ({
+            ...file,
+            src: `${req.protocol}://${req.headers.host}${file.path.replace("public/images", "")}`
+        }))
+        const images = recipeFiles
+
+        return res.render('site/recipes/recipes', {recipes, images})
     },
     chefs(req, res){
         Site.allChefs(function(chefs){
@@ -42,12 +65,11 @@ module.exports = {
     about(req, res){
         return res.render('site/about/about')
     },
-    details(req, res){
-        Site.findRecipes(req.params.id, function(recipe){
-            if(!recipe) return res.send('Recipe not found!')
-
-            return res.render('site/recipes/details', {recipe})
-        })
-
+    async details(req, res){
+        console.log(req.params.id)
+        const result = await Site.findRecipes(req.params.id)
+        const recipe = result.rows[0]
+        
+        return res.render('site/recipes/details', {recipe})
     }
 }

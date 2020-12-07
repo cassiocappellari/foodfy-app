@@ -21,14 +21,16 @@
 <section class="content2">
     <h2>Our Recipes</h2>
     <div class="cards">
+        <div class="card" id="{{recipes.id}}">
+        {%for image in images%}
+            <img src="{{image.src}}" alt="{{image.id}}">
+        {%endfor%}
         {%for recipe in recipes%}
-        <div class="card" id="{{recipe.id}}">
-            <img src="{{recipe.src}}" alt="{{recipe.id}}">
             <div class="preparation-time">{{recipe.time}}</div>
             <h3>{{recipe.title}}</h3>
             <h4>by {{recipe.chefs_name}}</h4>
-        </div>
         {%endfor%}
+        </div>
     </div>
 </section>
 <script src="/site/scripts.js"></script>

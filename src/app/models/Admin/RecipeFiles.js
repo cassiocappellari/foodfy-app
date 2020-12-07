@@ -1,6 +1,11 @@
 const db = require('../../../config/db')
 
 module.exports = {
+    getAllFiles() {
+        return db.query(`
+            SELECT * FROM files
+        `)
+    },
     getFiles(id) {
         return db.query(`
             SELECT * FROM files
