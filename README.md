@@ -6,6 +6,8 @@
     <img src="./public/assets/foodfy-gif.gif">
 </h2>
 
+Status:
+
 ---
 
 ## 📋 Index
