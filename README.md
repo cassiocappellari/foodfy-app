@@ -1,4 +1,8 @@
 <h1 align="center">
+    <img src="./public/assets/logo-white.png">
+</h1>
+
+<h1 align="center">
     <img src="./public/assets/logo.png">
 </h1>
 
