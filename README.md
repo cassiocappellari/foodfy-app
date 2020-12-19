@@ -6,7 +6,9 @@
     <img src="./public/assets/foodfy-gif.gif">
 </h2>
 
-Status:
+<h3 align="center"> 
+	Status: under construction :warning:
+</h3>
 
 ---
 
