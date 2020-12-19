@@ -55,7 +55,11 @@ The project was developed using this technologies:
 ```bash
 # Clone this repository
 
-$ git clone https://github.com/cassiocappellari/foodfy-app
+$ git clone https://github.com/cassiocappellari/foodfy-app.git
+
+# Enter the project folder
+
+$ cd foodfy-app
 
 # Install the dependencies
 
